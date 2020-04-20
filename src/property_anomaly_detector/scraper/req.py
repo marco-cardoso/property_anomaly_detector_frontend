@@ -1,53 +1,52 @@
 import time
-import re
 from datetime import datetime
 
 import requests
-import numpy as np
 from bs4 import BeautifulSoup
-
-from database import Database
-from utils import *
+from property_anomaly_detector.database import Database
+from property_anomaly_detector.utils import *
 
 database = Database()
+
 
 def sleep(function):
     def wrapper(*args, **kwargs):
         result = function(*args, **kwargs)
         time.sleep(0.5)
         return result
-    
+
     return wrapper
 
+
 class Requests():
-    
+
     def __init__(self):
         super().__init__()
         self.main_url = "https://www.rightmove.co.uk"
         self.dst_code_url = "https://www.rightmove.co.uk/typeAhead/uknostreet/"
-    
-    @sleep
-    def get_district_code(self, district : str) -> dict:
 
-        district = district.upper().replace(" ","")
-        splitted = [ district[i:i+2] +"/"  for i in range(0, len(district), 2) ]
+    @sleep
+    def get_district_code(self, district: str) -> dict:
+
+        district = district.upper().replace(" ", "")
+        splitted = [district[i:i + 2] + "/" for i in range(0, len(district), 2)]
         final_url = self.dst_code_url + str().join(splitted)
 
         response = requests.get(final_url).json()['typeAheadLocations']
 
         location_identifier = next(filter(
-            lambda dictionary : 
+            lambda dictionary:
             dictionary['normalisedSearchTerm'].endswith("BOROUGH")
             or
             dictionary['normalisedSearchTerm'].endswith("CITY OF"),
             response
         ))
-        
+
         # Removing the string REGION^ from the text
         location_identifier['locationIdentifier'] = location_identifier['locationIdentifier'].split("^")[1]
 
         database.insert_district(location_identifier)
-        
+
     @sleep
     def get_property_information(self, path: str):
         url = self.main_url + path
@@ -55,7 +54,7 @@ class Requests():
         # This try-exception is necessary since some observations presented
         # a few errors. 7/27411
         try:
-           
+
             print("Getting the data from " + url + " ...")
 
             response = requests.get(url)
@@ -99,7 +98,6 @@ class Requests():
             stations_li = soup.find("ul", {"class": "stations-list"})
 
             if stations_li is not None:
-
                 stations_li = stations_li.findChildren("li")
                 stations = [
                     {
@@ -109,9 +107,8 @@ class Requests():
                     for station_li in stations_li
                 ]
 
-
             document = {
-                'url' : url,
+                'url': url,
                 'title': title,
                 'address': address,
                 'price': price,
@@ -129,31 +126,30 @@ class Requests():
         except:
             print("Error " + url)
             database.save_error(url)
-        
+
     @sleep
-    def get_district_links(self, index : int, district : str):
-        
-        district = district.replace("^","%")
+    def get_district_links(self, index: int, district: str):
+
+        district = district.replace("^", "%")
         url = "https://www.rightmove.co.uk/property-to-rent/find.html?" \
-                      f"locationIdentifier=REGION%5E{district}&" \
-                      f"index={index}&" \
-                      "propertyTypes=&" \
-                      "includeLetAgreed=true&" \
-                      "mustHave=&" \
-                      "dontShow=&" \
-                      "furnishTypes=&" \
-                      "keywords="
+              f"locationIdentifier=REGION%5E{district}&" \
+              f"index={index}&" \
+              "propertyTypes=&" \
+              "includeLetAgreed=true&" \
+              "mustHave=&" \
+              "dontShow=&" \
+              "furnishTypes=&" \
+              "keywords="
 
         response = requests.get(url)
         print(url)
-        
+
         soup = BeautifulSoup(response.text, features="html.parser")
 
         anchors = soup.find_all("a", {"class": "propertyCard-link"})
         unique_links = set([a.attrs['href'] for a in anchors])
-        
+
         if len(unique_links) > 0:
-            
             database.save_processed_links(
                 {
                     'index': index,
@@ -163,5 +159,5 @@ class Requests():
             )
             print("saved")
             return unique_links
-            
+
         return unique_links
