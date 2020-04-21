@@ -1,0 +1,53 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,S1,SHEFFIELD,Sheffield City Centre,Sheffield
+1,S2,SHEFFIELD,"Arbourthorne, Heeley, Highfield, Manor, Norfolk Park, Wybourn, Park Hill",Sheffield
+2,S3,SHEFFIELD,"Broomhall, Burngreave, Neepsend, Netherthorpe",Sheffield
+3,S4,SHEFFIELD,"Grimesthorpe, Pitsmoor",Sheffield
+4,S5,SHEFFIELD,"Firth Park, Fir Vale, Longley, Shirecliffe, Shiregreen, Southey Green, Parson Cross, Wincobank",Sheffield
+5,S6,SHEFFIELD,"Bradfield, Dungworth, Hillsborough, Holdworth, Hollow Meadows, Loxley, Malin Bridge, Middlewood, Stannington, Storrs, Upperthorpe, Walkley, Wadsley Bridge, Wisewood, Wadsley, Fox Hill,",Sheffield
+6,S7,SHEFFIELD,"Abbeydale, Carter Knowle, Nether Edge, Millhouses",Sheffield
+7,S8,SHEFFIELD,"Batemoor, Beauchief, Greenhill, Jordanthorpe, Lowedges, Meersbrook, Norton, Norton Lees, Woodseats",Sheffield
+8,S9,SHEFFIELD,"Attercliffe, Brightside, Darnall, Meadowhall, Tinsley, Wincobank",Sheffield
+9,S10,SHEFFIELD,"Broomhill, Broomhall, Crookes, Crookesmoor, Crosspool, Fulwood, Ranmoor",Sheffield
+10,S11,SHEFFIELD,"Ecclesall, Endcliffe Park, Ecclesall Road, Greystones, Hunter's Bar, Millhouses, Sharrow Vale, Nether Edge, Whirlow, Brincliffe",Sheffield
+11,S12,SHEFFIELD,"Birley, Gleadless, Gleadless Townend, Frecheville, Hackenthorpe, Intake, Ridgeway","North East Derbyshire, Sheffield"
+12,S13,SHEFFIELD,"Fence, Handsworth, Richmond, Woodhouse","Rotherham, Sheffield"
+13,S14,SHEFFIELD,Gleadless Valley,Sheffield
+14,S17,SHEFFIELD,"Dore, Totley, Bradway",Sheffield
+15,S18,DRONFIELD,"Coal Aston, Dronfield, Dronfield Woodhouse, Holmesfield, Unstone",North East Derbyshire
+16,S20,SHEFFIELD,"Beighton, Crystal Peaks, Halfway, Mosborough, Owlthorpe, Sothall, Waterthorpe, Westfield,",Sheffield
+17,S21,SHEFFIELD,"Eckington, Killamarsh, Renishaw, Spinkhill",North East Derbyshire
+18,S25,SHEFFIELD,"Anston, Dinnington, Laughton-en-le-Morthen",Rotherham
+19,S26,SHEFFIELD,"Aston, Aughton, Harthill, Kiveton Park, Swallownest, Todwick, Wales",Rotherham
+20,S32,HOPE VALLEY,"Calver, Eyam, Grindleford, Hathersage, Stoney Middleton",Derbyshire Dales
+21,S33,HOPE VALLEY,"Bamford, Bradwell, Castleton, Edale, Hope, Yorkshire Bridge",High Peak
+22,S35,SHEFFIELD,"Chapeltown, Crane Moor, Ecclesfield, Grenoside, High Green, Oughtibridge, Thurgoland, Wharncliffe Side, Wortley",Sheffield
+23,S36,SHEFFIELD,"Penistone, Thurlstone, Millhouse Green, Oxspring, Stocksbridge, Deepcar, Bolsterstone, Catshaw","Barnsley, Sheffield"
+24,S40,CHESTERFIELD,"Central and West Chesterfield, Brampton",Chesterfield
+25,S41,CHESTERFIELD,"Hasland, North Chesterfield, Old Whittington","Chesterfield, North East Derbyshire"
+26,S42,CHESTERFIELD,"Holymoorside, Grassmoor, North Wingfield, Tupton, Wingerworth, Mastin Moor","Chesterfield, North East Derbyshire"
+27,S43,CHESTERFIELD,"Brimington, Barlborough, Clowne, Inkersall Green, Staveley","Bolsover, Chesterfield"
+28,S44,CHESTERFIELD,"Bolsover, Calow, Sutton cum Duckmanton, Scarcliffe","Bolsover, North East Derbyshire"
+29,S45,CHESTERFIELD,"Ashover, Clay Cross, Pilsley",North East Derbyshire
+30,S49,CHESTERFIELD,Bulk users,non-geographic
+31,S60,ROTHERHAM,"Brinsworth, Catcliffe, Canklow, Clifton Central Rotherham, Masbrough, Moorgate, Treeton, Whiston",Rotherham
+32,S61,ROTHERHAM,"Greasbrough, Kimberworth, Rockingham, Thorpe Hesley, Munsborough, Scholes, Ferham",Rotherham
+33,S62,ROTHERHAM,"Rawmarsh, Wentworth, Parkgate",Rotherham
+34,S63,ROTHERHAM,"Bolton-on-Dearne, Goldthorpe, Thurnscoe, Brampton, Wath-on-Dearne, West Melton","Barnsley, Rotherham"
+35,S64,MEXBOROUGH,"Mexborough, Swinton, Kilnhurst, Adwick Upon Dearne","Doncaster, Rotherham"
+36,S65,ROTHERHAM,"Herringthorpe, Hooton Roberts, Ravenfield, Thrybergh, East Dene",
+37,S66,ROTHERHAM,"Bramley Hellaby, Maltby, Thurcroft, Wickersley, Braithwell",Rotherham
+38,S70,BARNSLEY,"Central Barnsley, Birdwell, Stairfoot, Worsborough, Kendray",Barnsley
+39,S71,BARNSLEY,"Ardsley, Athersley, Monk Bretton, Lundwood, Royston",Barnsley
+40,S72,BARNSLEY,"Brierley, Cudworth, Grimethorpe, Shafton, South Hiendley","Barnsley, City of Wakefield"
+41,S73,BARNSLEY,"Darfield, Wombwell, Hemingfield","Barnsley, Rotherham"
+42,S74,BARNSLEY,"Elsecar, Hoyland, Jump, Blacker Hill",Barnsley
+43,S75,BARNSLEY,"Barugh Green, Cawthorne, Darton, Dodworth, Gawber, Mapplewell, Pogmoor, Staincross, Wilthorpe, Tankersley, Kexborough",Barnsley
+44,S80,WORKSOP,"Creswell, Thorpe Salvin, South Worksop, Whitwell","Bassetlaw, Bolsover, Rotherham"
+45,S81,WORKSOP,"Blyth, Carlton-in-Lindrick, Langold, North Worksop, Shireoaks, Woodsetts","Bassetlaw, Rotherham"
+46,S94,SHEFFIELD,Census 2021 (a main national office),non-geographic
+47,S95,SHEFFIELD,Bulk users,non-geographic
+48,S96,SHEFFIELD,Bulk users,non-geographic
+49,S97,"ROTHERHAM, SHEFFIELD",Bulk users,non-geographic
+50,S98,SHEFFIELD,Bulk users,non-geographic
+51,S99,SHEFFIELD,Jobcentre Plus,non-geographic

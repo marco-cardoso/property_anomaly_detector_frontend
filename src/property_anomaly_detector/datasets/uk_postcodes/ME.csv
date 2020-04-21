@@ -1,0 +1,22 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,ME1,ROCHESTER,"Rochester, Borstal, Burham, Wouldham","Medway, Tonbridge and Malling"
+1,ME2,ROCHESTER,"Strood, Halling, Cuxton, Frindsbury",Medway
+2,ME3,ROCHESTER,"Rural, Hoo Peninsula, Higham","Medway, Gravesham"
+3,ME4,CHATHAM,"Chatham, Brompton, Luton, St. Mary's Island",Medway
+4,ME5,CHATHAM,"Walderslade, Blue Bell Hill, Lordswood, Luton","Medway, Tonbridge and Malling & Maidstone"
+5,ME6,SNODLAND,Snodland,Tonbridge and Malling
+6,ME7,GILLINGHAM,"Gillingham, Brompton, Hempstead, Bredhurst","Medway, Maidstone"
+7,ME8,GILLINGHAM,"Rainham, Parkwood, Twydall, Hempstead, Wigmore",Medway
+8,ME9,SITTINGBOURNE,"Newington, Teynham, Iwade and Rural",Swale
+9,ME10,SITTINGBOURNE,"Sittingbourne, Kemsley, Milton Regis",Swale
+10,ME11,QUEENBOROUGH,"Queenborough, Rushenden",Swale
+11,ME12,SHEERNESS,"Isle of Sheppey, Minster, Sheerness, Eastchurch",Swale
+12,ME13,FAVERSHAM,"Faversham, Boughton under Blean, Selling and rural area",Swale
+13,ME14,MAIDSTONE,"Maidstone, Bearsted, Grove Green",Maidstone
+14,ME15,MAIDSTONE,"Bearsted (Madginford), Downswood, Shepway, Senacre, Maidstone Town Centre, Loose, Mangravet, Park Wood, Tovil, East Farleigh, West Farleigh",Maidstone
+15,ME16,MAIDSTONE,"Barming, Allington and west Maidstone",Maidstone
+16,ME17,MAIDSTONE,"Hollingbourne, Hucking, Harrietsham, Lenham, Boughton Monchelsea, Linton, Coxheath, Chart Sutton, East Sutton, Langley, Kingswood, Sutton Valence",Maidstone
+17,ME18,MAIDSTONE,"Wateringbury, Mereworth, Teston, Nettlestead, West Peckham, Yalding, Laddingford","Maidstone, Tonbridge and Malling"
+18,ME19,WEST MALLING,"West Malling, Kings Hill, Leybourne, East Malling",Tonbridge and Malling
+19,ME20,AYLESFORD,"Aylesford, Ditton, Larkfield, Eccles",Tonbridge and Malling
+20,ME99,ROCHESTER,Jobcentre Plus,non-geographic

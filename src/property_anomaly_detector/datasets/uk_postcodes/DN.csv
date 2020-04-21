@@ -1,0 +1,34 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,DN1,DONCASTER,Doncaster Town Centre,Doncaster
+1,DN2,DONCASTER,"Intake, Wheatley, Wheatley Hills",Doncaster
+2,DN3,DONCASTER,"Armthorpe, Barnby Dun, Branton, Edenthorpe, Kirk Sandall",Doncaster
+3,DN4,DONCASTER,"Balby, Belle Vue, Bessacarr, Cantley, Hexthorpe, Warmsworth",Doncaster
+4,DN5,DONCASTER,"Arksey, Barnburgh, Bentley, Cadeby, Cusworth, Harlington, High Melton, Scawsby, Scawthorpe, Sprotborough, Sunnyfields, Toll Bar","Barnsley, Doncaster, Rotherham"
+5,DN6,DONCASTER,"Adwick-le-Street, Askern, Campsall, Carcroft, Fenwick, Moss, Norton, Sutton, Walden Stubbs, Woodlands","Doncaster, Selby"
+6,DN7,DONCASTER,"Dunsville, Dunscroft, Fishlake, Hatfield, Hatfield Woodhouse, Lindholme, Stainforth",Doncaster
+7,DN8,DONCASTER,"Moorends, Sandtoft, Thorne",Doncaster
+8,DN9,DONCASTER,"Epworth, Finningley, Haxey, Auckley, Owston Ferry, Belton, Westwoodside","Doncaster, North Lincolnshire"
+9,DN10,DONCASTER,"Bawtry, Misson, Misterton, Scrooby","Bassetlaw, Doncaster"
+10,DN11,DONCASTER,"Bircotes, Harworth, New Rossington, Rossington, Tickhill, Wadworth","Bassetlaw, Doncaster"
+11,DN12,DONCASTER,"Conisbrough, Denaby Main, New Edlington, Old Denaby, Old Edlington","Doncaster, Rotherham"
+12,DN14,GOOLE,"Carlton, Eggborough, Goole, Hensall, Howden, Pincheon Green, Rawcliffe, Snaith, Sykehouse, Whitley, Whitley Bridge","Doncaster, East Riding of Yorkshire, Selby"
+13,DN15,SCUNTHORPE,"Alkborough, Appleby, Burton upon Stather, Coleby, Dragonby, Flixborough, Flixborough Ind Estate, Foxhills Ind Estate, Gunness, High Risby, High Santon, Low Risby, Low Santon, Normanby, Roxby, Scunthorpe, Thealby, West Halton, Whitton, Wintringham, Winterton",North Lincolnshire
+14,DN16,SCUNTHORPE,"Bottesford, Holme, Queensway Ind Estate, Raventhorpe, Scunthorpe, Twigmoor",North Lincolnshire
+15,DN17,SCUNTHORPE,"Althorpe, Amcotts, Bottesford Moor, Bottesford, Crowle, Derrythorpe, Ealand, East Butterwick, Eastoft, Garthorpe, Gunness, Keadby, Luddington, Messingham, North Ewster, Scunthorpe, Susworth, West Butterwick, Yaddlethorpe",North Lincolnshire
+16,DN18,BARTON-UPON-HUMBER,"Barton-upon-Humber, South Ferriby, Horkstow",North Lincolnshire
+17,DN19,BARROW-UPON-HUMBER,"Barrow-upon-Humber, Goxhill, New Holland",North Lincolnshire
+18,DN20,BRIGG,"Brigg, Broughton, Hibaldstow, Scawby, Wrawby",North Lincolnshire
+19,DN21,GAINSBOROUGH,"Gainsborough, Kirton Lindsey, Marton, Lea, Blyton, Scotter, Scotton",West Lindsey
+20,DN22,RETFORD,"Ranskill, Retford",Bassetlaw
+21,DN31,GRIMSBY,,North East Lincolnshire
+22,DN32,GRIMSBY,Old Clee,North East Lincolnshire
+23,DN33,GRIMSBY,"Nunsthorpe, Scartho, Scartho Top",North East Lincolnshire
+24,DN34,GRIMSBY,"Laceby Acres, Little Coates",North East Lincolnshire
+25,DN35,CLEETHORPES,Cleethorpes,North East Lincolnshire
+26,DN36,GRIMSBY,"Holton le Clay, Humberston, Ludborough, Marshchapel, New Waltham, North Cotes, North Thoresby, Tetney","East Lindsey, North East Lincolnshire"
+27,DN37,GRIMSBY,"Ashby cum Fenby, Barnoldby-le-Beck, Beelsby, Bradley, Brocklesby, Great Coates, Great Limber, Irby-upon-Humber, Laceby, Waltham","North East Lincolnshire, West Lindsey"
+28,DN38,BARNETBY,"Barnetby, Grasby, Searby, Somerby","North Lincolnshire, West Lindsey"
+29,DN39,ULCEBY,"Croxton, Kirmington, Ulceby, Wootton",North Lincolnshire
+30,DN40,IMMINGHAM,"North Killingholme, South Killingholme, Habrough, Immingham, East Halton","North Lincolnshire, North East Lincolnshire"
+31,DN41,GRIMSBY,"Healing, Keelby, Stallingborough","North East Lincolnshire, West Lindsey"
+32,DN55,DONCASTER,Royal Mail Physical-To-Electronic Centre (PTE)[3][4],non-geographic

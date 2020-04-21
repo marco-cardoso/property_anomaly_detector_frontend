@@ -1,0 +1,25 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,LA1,LANCASTER,"Lancaster, Aldcliffe, Bailrigg",City of Lancaster
+1,LA2,LANCASTER,"Lancaster, Abbeystead, Aldcliffe, Aughton, Austwick, Bailrigg, Bay Horse, Caton, Clapham, Cockerham, Dolphinholme, Ellel, Farleton, Galgate, Glasson Dock, Halton, Hest Bank, High Bentham, Hornby, Quernmore, Tatham, Wharfe","City of Lancaster, Craven, Wyre"
+2,LA3,MORECAMBE,"Morecambe, Heysham, Middleton, Overton, Sunderland Point",City of Lancaster
+3,LA4,MORECAMBE,"Morecambe, Torrisholme",City of Lancaster
+4,LA5,CARNFORTH,"Carnforth, Arnside, Silverdale, Warton, Bolton-Le-Sands","City of Lancaster, South Lakeland"
+5,LA6,CARNFORTH,"Arkholme, Burton-in-Kendal, Burton in Lonsdale, Cantsfield, Casterton, Ingleton, Ireby, Kirkby Lonsdale, Masongill, Tunstall, Whittington","City of Lancaster, Craven, South Lakeland"
+6,LA7,MILNTHORPE,"Milnthorpe, Beetham, Storth, Heversham",South Lakeland
+7,LA8,KENDAL,"Kendal, Brigsteer, Grayrigg, Levens, Sedgwick, Sizergh","South Lakeland, Eden"
+8,LA9,KENDAL,"Kendal, Burneside, Natland, Oxenholme",South Lakeland
+9,LA10,SEDBERGH,"Sedbergh, Dent","South Lakeland, Craven, Eden"
+10,LA11,GRANGE-OVER-SANDS,"Grange-over-Sands, Allithwaite, Cark, Cartmel, Field Broughton, High Newton, Lindale, Low Newton, Meathop and Ulpha, Witherslack",South Lakeland
+11,LA12,ULVERSTON,"Ulverston, Aldingham, Backbarrow, Gleaston, Haverthwaite, Leece, Lindal-in-Furness, Newbiggin (Furness), Newby Bridge, Staveley-in-Cartmel, Urswick","South Lakeland, Barrow-in-Furness"
+12,LA13,BARROW-IN-FURNESS,"Barrow-in-Furness, Newton-in-Furness, Piel Island, Rampside, Roa Island, Stainton with Adgarley","Barrow-in-Furness, South Lakeland"
+13,LA14,BARROW-IN-FURNESS,"Barrow-in-Furness, Walney Island",Barrow-in-Furness
+14,LA14,DALTON-IN-FURNESS,,non-geographic[3]
+15,LA15,DALTON-IN-FURNESS,Dalton-in-Furness,Barrow-in-Furness
+16,LA16,ASKAM-IN-FURNESS,Askam-in-Furness,Barrow-in-Furness
+17,LA17,KIRKBY-IN-FURNESS,Kirkby-in-Furness,South Lakeland
+18,LA18,MILLOM,Millom,Copeland
+19,LA19,MILLOM,"Millom, Waberthwaite, Bootle",Copeland
+20,LA20,BROUGHTON-IN-FURNESS,Broughton-in-Furness,"South Lakeland, Copeland"
+21,LA21,CONISTON,"Coniston, Torver",South Lakeland
+22,LA22,AMBLESIDE,"Ambleside, Chapel Stile, Elterwater, Grasmere, Hawkshead, Near Sawrey, Skelwith Bridge",South Lakeland
+23,LA23,WINDERMERE,"Windermere, Bowness-on-Windermere, Troutbeck",South Lakeland

@@ -1,0 +1,37 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,CH1,CHESTER,"Blacon, Chester, Higher Ferry, Capenhurst, Backford","Cheshire West and Chester, Flintshire"
+1,CH2,CHESTER,"Backford, Chester, Elton, Hoole, Ince, Mickle Trafford, Moston, Newton by Chester, Upton by Chester",Cheshire West and Chester
+2,CH3,CHESTER,"Boughton, Chester, Huntington, Mouldsworth, Tarvin, Tattenhall, Farndon, Waverton, Saighton, Upton by Chester",Cheshire West and Chester
+3,CH4,CHESTER,"Chester, Curzon Park, Handbridge, Lache, Pulford, Penyffordd, Broughton, Saltney","Cheshire West and Chester, Flintshire"
+4,CH5,DEESIDE,"Connah's Quay, Shotton, Queensferry, Sealand, Garden City, Sandycroft, Hawarden, Ewloe, Mancot",Flintshire
+5,CH6,"BAGILLT, FLINT","Flint, Oakenholt, Flint Mountain, The Nant, Bagillt",Flintshire
+6,CH7,"BUCKLEY, MOLD","Buckley, Leeswood, Treuddyn, Llanarmon-yn-Ial, Caerwys, Mold, Northop Hall, Drury","Flintshire, Denbighshire"
+7,CH8,HOLYWELL,"Holywell, Milwr, Holway, Carmel, Lloc, Bryn Celyn, Greenfield, Halkyn, Lixwm, Talacre",Flintshire
+8,CH25,BIRKENHEAD,PO Boxes,non-geographic
+9,CH26,PRENTON,PO Boxes,non-geographic
+10,CH27,WALLASEY,PO Boxes,non-geographic
+11,CH28,WIRRAL,PO Boxes in Moreton,non-geographic
+12,CH29,WIRRAL,PO Boxes in Hoylake,non-geographic
+13,CH30,WIRRAL,PO Boxes in Upton,non-geographic
+14,CH31,WIRRAL,PO Boxes in Heswall,non-geographic
+15,CH32,WIRRAL,PO Boxes in New Ferry,non-geographic
+16,CH33,NESTON,PO Boxes,non-geographic
+17,CH34,ELLESMERE PORT,PO Boxes,non-geographic
+18,CH41,BIRKENHEAD,"Birkenhead, Claughton, Seacombe, Tranmere, Woodside",Wirral
+19,CH42,BIRKENHEAD,"Birkenhead, Oxton, Prenton, Rock Ferry",Wirral
+20,CH43,PRENTON,"Beechwood, Bidston, Noctorum, Oxton, Prenton",Wirral
+21,CH44,WALLASEY,"Egremont, Liscard, Poulton, Seacombe, Wallasey",Wirral
+22,CH45,WALLASEY,"New Brighton, Wallasey, Wallasey Village",Wirral
+23,CH46,WIRRAL,"Leasowe, Moreton",Wirral
+24,CH47,WIRRAL,"Hoylake, Meols, Saughall Massie, West Kirby",Wirral
+25,CH48,WIRRAL,"Caldy, Frankby, Grange, Greasby, Hoylake, Meols, Newton, West Kirby",Wirral
+26,CH49,WIRRAL,"Greasby, Landican, Saughall Massie, Upton, Woodchurch",Wirral
+27,CH60,WIRRAL,"Gayton, Heswall",Wirral
+28,CH61,WIRRAL,"Barnston, Heswall, Irby, Pensby, Thingwall, Thurstaston",Wirral
+29,CH62,WIRRAL,"Bromborough, Eastham, New Ferry, Port Sunlight, Spital",Wirral
+30,CH63,WIRRAL,"Brimstage, Bromborough, Clatterbridge, Higher Bebington, Lower Bebington, Raby, Raby Mere, Spital, Storeton, Thornton Hough",Wirral
+31,CH64,NESTON,"Little Neston, Ness, Neston, Parkgate, Puddington, Willaston",Cheshire West and Chester
+32,CH65,ELLESMERE PORT,"Ellesmere Port, Great Sutton, Whitby, Wolverham",Cheshire West and Chester
+33,CH66,ELLESMERE PORT,"Childer Thornton, Ellesmere Port, Great Sutton, Hooton, Ledsham, Little Sutton, Overpool, Whitby",Cheshire West and Chester
+34,CH88,CHESTER,North West Securities Bank[4],non-geographic
+35,CH99,CHESTER,"Benefits Agency,[4] St. Michaels Financial Services & Chargecard[4]",non-geographic

@@ -1,0 +1,28 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,SW1A,LONDON,"Whitehall, Buckingham Palace, the Houses of Parliament and west of St James's",Westminster
+1,SW1E,LONDON,Northern 'Victoria' around Buckingham Gate (a street) to include both sides of part of Victoria Street,Westminster
+2,SW1H,LONDON,"Surrounds of St James's Park tube station centred on Broadway, Queen Anne's Gate and Old Queen Street to include both sides of part of Victoria Street - derivation: Horse Guards Parade",Westminster
+3,SW1P,LONDON,"A projection around Parliament Square. Nearby Westminster School to Westminster Cathedral to CCAL, University of the Arts, London (omitting all backstreets nearest to Vauxhall Bridge Road) - derivation: Parliament Square",Westminster
+4,SW1V,LONDON,"between Vauxhall Bridge, Grosvenor (or Victoria Railway) Bridge and Victoria Station, taking in both sides of Vauxhall Bridge Road; includes Pimlico",Westminster
+5,SW1W,LONDON,"South or lower Belgravia and Chelsea (a corner), from Sloane Square to Victoria Station to Grosvenor Waterside basin","Kensington and Chelsea, Westminster"
+6,SW1X,LONDON,"Rest of Belgravia (north of Eaton Square), Knightsbridge (eastern half) and Chelsea (a corner)","Kensington and Chelsea, Westminster"
+7,SW1Y,LONDON,All but the west of St James's,Westminster
+8,SW2,LONDON,"Brixton district: Brixton Hill, Tulse Hill (part), Brixton (part), Streatham Hill, Clapham (part), Eastern parts of Balham, Lambeth",Lambeth
+9,SW3,LONDON,"Chelsea district: Chelsea, Brompton, Knightsbridge (part)",Kensington and Chelsea
+10,SW4,LONDON,"Clapham district: Clapham, Stockwell (part)","Lambeth, Wandsworth"
+11,SW5,LONDON,Earls Court district: Earls Court,Kensington and Chelsea
+12,SW6,LONDON,"Fulham district: Fulham, Parsons Green",Hammersmith and Fulham
+13,SW7,LONDON,"South Kensington district: South Kensington, Knightsbridge (part)","Kensington and Chelsea, Westminster"
+14,SW8,LONDON,"South Lambeth district: South Lambeth, Wandsworth Road, Vauxhall, Battersea:Nine Elms (part), Clapham (part), NW area of Stockwell, Oval (part)","Lambeth, Wandsworth"
+15,SW9,LONDON,"Stockwell district: Brixton, Stockwell, Clapham (part), Oval (part)",Lambeth
+16,SW10,LONDON,"West Brompton district: West Brompton, Chelsea (part)","Hammersmith and Fulham, Kensington and Chelsea"
+17,SW11,LONDON,"Battersea head district: Battersea, Clapham South","Lambeth, Wandsworth"
+18,SW12,LONDON,"Balham district: Balham, Clapham South, Wandsworth Common (part)","Lambeth, Wandsworth"
+19,SW13,LONDON,Barnes district: Barnes,Richmond upon Thames
+20,SW14,LONDON,"Mortlake district: Mortlake, East Sheen",Richmond upon Thames
+21,SW15,LONDON,"Putney district: Putney, Roehampton, Kingston Vale, Putney Heath, Putney Vale, Richmond Park, Roehampton Vale","Kingston upon Thames, Richmond upon Thames, Wandsworth"
+22,SW16,LONDON,"Streatham district: Streatham, Streatham Common, Norbury, Streatham Park, Furzedown, Streatham Vale, Mitcham Common, Pollards Hill, Eastfields","Croydon, Lambeth, Merton, Wandsworth"
+23,SW17,LONDON,"Tooting district: Tooting, Balham (part), Mitcham (part)","Merton, Wandsworth"
+24,SW18,LONDON,"Wandsworth district: Wandsworth Town, Southfields, Earlsfield",Wandsworth
+25,SW19,LONDON,"Wimbledon district: Wimbledon, Colliers Wood, Merton Park, Merton Abbey, Southfields, Morden (part)","Merton, Wandsworth"
+26,SW20,LONDON,"West Wimbledon district: Raynes Park, Lower Morden, Merton Park, Wimbledon Chase",Merton

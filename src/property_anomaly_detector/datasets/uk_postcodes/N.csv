@@ -1,0 +1,26 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,N1,LONDON,"Northern head district: Barnsbury (part), Canonbury, Kings Cross, Islington, Pentonville, De Beauvoir Town, Hoxton. Shoreditch (part)","Camden, Hackney, Islington"
+1,N1C,LONDON,Kings Cross Central,Camden
+2,N1P,LONDON,PO boxes in N1 and N1C,non-geographic
+3,N2,LONDON,"East Finchley district: East Finchley, Fortis Green, Hampstead Garden Suburb (part)","Barnet, Haringey"
+4,N3,LONDON,"Finchley district: Finchley, Church End, Finchley Central",Barnet
+5,N4,LONDON,"Finsbury Park district: Finsbury Park, Manor House, Harringay (part), Stroud Green","Hackney, Haringey, Islington"
+6,N5,LONDON,"Highbury district: Highbury, Highbury Fields","Hackney (part), Islington"
+7,N6,LONDON,"Highgate district: Highgate, Hampstead Heath (part)","Camden, Haringey, Islington"
+8,N7,LONDON,"Holloway district: Holloway, Barnsbury (part), Islington (part), Tufnell Park (part)","Camden, Islington"
+9,N8,LONDON,"Hornsey district: Hornsey, Crouch End, Harringay (part)","Haringey, Islington"
+10,N9,LONDON,"Lower Edmonton district: Lower Edmonton, Edmonton (part)",Enfield
+11,N10,LONDON,"Muswell Hill district: Muswell Hill, Friern Barnet (part)","Barnet, Haringey"
+12,N11,LONDON,"New Southgate district: New Southgate, Friern Barnet, Bounds Green, Arnos Grove (part)","Barnet, Enfield, Haringey"
+13,N12,LONDON,"North Finchley district: North Finchley, Woodside Park, Friern Barnet (part)",Barnet
+14,N13,LONDON,Palmers Green district: Palmers Green,Enfield
+15,N14,LONDON,"Southgate district: Southgate, Oakwood, Arnos Grove (part)","Barnet, Enfield"
+16,N15,LONDON,"South Tottenham district: South Tottenham, Harringay (part), West Green, Seven Sisters",Haringey
+17,N16,LONDON,"Stoke Newington district: Stoke Newington, Stamford Hill (part), Shacklewell, Dalston (part), Newington Green (part)","Hackney, Islington"
+18,N17,LONDON,Tottenham district: Tottenham,Haringey
+19,N18,LONDON,"Upper Edmonton district: Upper Edmonton, Edmonton (part)",Enfield
+20,N19,LONDON,"Upper Holloway district: Upper Holloway, Archway, Tufnell Park (part)","Camden, Islington"
+21,N20,LONDON,"Whetstone district: Whetstone, Totteridge, Oakleigh Park",Barnet
+22,N21,LONDON,"Winchmore Hill district: Winchmore Hill, Bush Hill (part), Grange Park, World's End (part)",Enfield
+23,N22,LONDON,"Wood Green district: Wood Green, Bounds Green (part), Bowes Park","Enfield, Haringey"
+24,N81,LONDON,Electoral Reform Services,non-geographic

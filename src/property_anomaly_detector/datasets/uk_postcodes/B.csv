@@ -1,0 +1,79 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,B1,BIRMINGHAM,"Birmingham City Centre, Broad Street (east)",Birmingham
+1,B2,BIRMINGHAM,"Birmingham City Centre, New Street",Birmingham
+2,B3,BIRMINGHAM,"Birmingham City Centre, Newhall Street",Birmingham
+3,B4,BIRMINGHAM,"Birmingham City Centre, Corporation Street (north)",Birmingham
+4,B5,BIRMINGHAM,"Digbeth, Highgate, Lee Bank",Birmingham
+5,B6,BIRMINGHAM,"Aston, Birchfield, Birmingham , Witton",Birmingham
+6,B7,BIRMINGHAM,"Nechells, Vauxhall",Birmingham
+7,B8,BIRMINGHAM,"Washwood Heath, Ward End, Saltley",Birmingham
+8,B9,BIRMINGHAM,"Bordesley Green, Bordesley",Birmingham
+9,B10,BIRMINGHAM,Small Heath,Birmingham
+10,B11,BIRMINGHAM,"Sparkhill, Sparkbrook, Tyseley",Birmingham
+11,B12,BIRMINGHAM,"Balsall Heath, Sparkbrook, Highgate",Birmingham
+12,B13,BIRMINGHAM,"Moseley, Billesley",Birmingham
+13,B14,BIRMINGHAM,"Kings Heath, Yardley Wood, Druids Heath, Highter's Heath, Warstock",Birmingham
+14,B15,BIRMINGHAM,"Edgbaston,",Birmingham
+15,B16,BIRMINGHAM,Ladywood,Birmingham
+16,B17,BIRMINGHAM,"Harborne, Edgbaston",Birmingham
+17,B18,BIRMINGHAM,"Winson Green, Hockley",Birmingham
+18,B19,BIRMINGHAM,"Lozells, Newtown, Birchfield",Birmingham
+19,B20,BIRMINGHAM,"Handsworth Wood, Handsworth, Birchfield",Birmingham
+20,B21,BIRMINGHAM,Handsworth,Birmingham
+21,B23,BIRMINGHAM,"Erdington, Stockland Green, Short Heath, Perry Common",Birmingham
+22,B24,BIRMINGHAM,"Erdington, Wylde Green, Tyburn",Birmingham
+23,B25,BIRMINGHAM,Yardley,Birmingham
+24,B26,BIRMINGHAM,"Sheldon, Yardley",Birmingham
+25,B27,BIRMINGHAM,Acocks Green,Birmingham
+26,B28,BIRMINGHAM,Hall Green,Birmingham
+27,B29,BIRMINGHAM,"Selly Oak, Bournbrook, Selly Park, Weoley Castle, California (part of)",Birmingham
+28,B30,BIRMINGHAM,"Bournville, Cotteridge, Stirchley",Birmingham
+29,B31,BIRMINGHAM,"Northfield, Longbridge, West Heath",Birmingham
+30,B32,BIRMINGHAM,"Woodgate, Bartley Green, Quinton, California (part of)",Birmingham
+31,B33,BIRMINGHAM,"Kitts Green, Stechford",Birmingham
+32,B34,BIRMINGHAM,"Shard End, Buckland End",Birmingham
+33,B35,BIRMINGHAM,Castle Vale,Birmingham
+34,B36,BIRMINGHAM,"Castle Bromwich, Smith's Wood, Bromford, Hodge Hill","Birmingham, Solihull"
+35,B37,BIRMINGHAM,"Chelmsley Wood, Marston Green, Kingshurst, Fordbridge",Solihull
+36,B38,BIRMINGHAM,"Kings Norton, West Heath",Birmingham
+37,B40,BIRMINGHAM,"National Exhibition Centre, Birmingham International Airport, Marston Green, Bickenhill",Solihull
+38,B42,BIRMINGHAM,"Perry Barr, Great Barr, Hamstead",Birmingham
+39,B43,BIRMINGHAM,"Great Barr, Hamstead",Birmingham
+40,B44,BIRMINGHAM,"Perry Barr, Kingstanding, Great Barr",Birmingham
+41,B45,BIRMINGHAM,"Rednal, New Frankley, Rubery, Cofton Hackett, Barnt Green, Lickey, Longbridge, Northfield (part)","Birmingham, Bromsgrove"
+42,B46,BIRMINGHAM,"Water Orton, Coleshill, Nether Whitacre",North Warwickshire
+43,B47,BIRMINGHAM,"Hollywood, Wythall",Bromsgrove
+44,B48,BIRMINGHAM,Alvechurch,Bromsgrove
+45,B49,ALCESTER,Alcester,Stratford-on-Avon
+46,B50,ALCESTER,Bidford-on-Avon,Stratford-on-Avon
+47,B60,BROMSGROVE,Bromsgrove (east),Bromsgrove
+48,B61,BROMSGROVE,Bromsgrove (west),Bromsgrove
+49,B62,HALESOWEN,"Halesowen (east), Romsley, Hunnington, Quinton (part)","Dudley, Bromsgrove, Birmingham"
+50,B63,HALESOWEN,"Halesowen (west and town centre), Hayley Green, Hasbury","Dudley, Bromsgrove"
+51,B64,CRADLEY HEATH,"Cradley Heath, Old Hill",Sandwell
+52,B65,ROWLEY REGIS,"Rowley Regis, Blackheath","Birmingham, Sandwell"
+53,B66,SMETHWICK,"Smethwick (east and north), Bearwood (east)",Sandwell
+54,B67,SMETHWICK,"Smethwick (west), Bearwood (west), Londonderry",Sandwell
+55,B68,OLDBURY,"Langley, Brandhall, Quinton (part of)",Sandwell
+56,B69,OLDBURY,"Oldbury, Tividale",Sandwell
+57,B70,WEST BROMWICH,"West Bromwich (south, west and town centre)",Sandwell
+58,B71,WEST BROMWICH,West Bromwich (north),Sandwell
+59,B72,SUTTON COLDFIELD,"Sutton Coldfield town centre, Maney, Wylde Green, Erdington",Birmingham
+60,B73,SUTTON COLDFIELD,"Boldmere, New Oscott, Wylde Green",Birmingham
+61,B74,SUTTON COLDFIELD,"Four Oaks, Mere Green, Little Aston, Streetly","Birmingham, Lichfield, Walsall"
+62,B75,SUTTON COLDFIELD,"Sutton Trinity, Falcon Lodge, Rectory",Birmingham
+63,B76,SUTTON COLDFIELD,"Walmley, Minworth",Birmingham
+64,B77,TAMWORTH,"Tamworth, Wilnecote, Amington","Tamworth, North Warwickshire"
+65,B78,TAMWORTH,"Tamworth, Fazeley, Kingsbury, Polesworth","Tamworth, North Warwickshire"
+66,B79,TAMWORTH,"Tamworth, Warton","Tamworth, North Warwickshire"
+67,B80,STUDLEY,Studley,Stratford-on-Avon
+68,B90,SOLIHULL,"Shirley, Solihull Lodge, Majors Green, Dickens Heath, Cheswick Green","Solihull, Bromsgrove"
+69,B91,SOLIHULL,Solihull,Solihull
+70,B92,SOLIHULL,"Olton, Elmdon, Bickenhill, Hampton-in-Arden",Solihull
+71,B93,SOLIHULL,Knowle,Solihull
+72,B94,SOLIHULL,"Hockley Heath, Earlswood",Solihull
+73,B95,HENLEY-IN-ARDEN,Henley-in-Arden,Stratford-on-Avon
+74,B96,REDDITCH,Feckenham,Redditch
+75,B97,REDDITCH,"Redditch (west), Callow Hill, Webheath",Redditch
+76,B98,REDDITCH,"Redditch (east), Beoley",Redditch
+77,B99,BIRMINGHAM,,non-geographic

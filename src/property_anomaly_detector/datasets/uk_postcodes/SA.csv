@@ -1,0 +1,59 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,SA1,SWANSEA,"Bonymaen, Copper Quarter, Crymlyn Burrows, Danygraig, Greenhill, Hafod, Jersey Marine, Landore, Maritime Quarter, Mayhill, Mount Pleasant, Pentrechwyth, Port Tennant, St. Thomas, City Centre, Townhill, Waun Wen, Winch Wen, Winch Wen Industrial Estate",Swansea
+1,SA2,SWANSEA,"Brynmill, Cockett, Derwen Fawr, Dunvant, Fairwood, Glanmor, Hendrefoilan, Hendrefoilan Student Village, Ilston, Killay, Sketty, Sketty Park, Singleton Park (University Campus), Tycoch, Uplands, Upper Killay",Swansea
+2,SA3,SWANSEA,"Bishopston, Blackpill, Caswell, Clyne, Langland, Mumbles, Oystermouth, Southgate, South Gower, West Cross,",Swansea
+3,SA4,SWANSEA,"Blue Anchor, Gorseinon, Gowerton, Hendy (Carmarthenshire), Loughor, North Gower, Penllergaer, Penclawdd, Pontarddulais, Three Crosses","Swansea, Carmarthenshire"
+4,SA5,SWANSEA,"Blaenymaes, Cwmdu, Cwmdu Industrial Estate, Felindre, Fforestfach, Gendros, Llangyfelach, Llewitha, Manselton, Penlan, Portmead, Tirdeunaw, Waunarlwydd",Swansea
+5,SA6,SWANSEA,"Clase, Cwmrhydyceirw, Clydach, Morriston, Plasmarl, Plasmarl Industrial Estate, Swansea Enterprise Park, Ynystawe, Ynysforgan",Swansea
+6,SA7,SWANSEA,"Birchgrove, Glais, Llansamlet, Swansea Enterprise Park, Talycoppa, Trallwn",Swansea
+7,SA8,SWANSEA,"Alltwen, Cwmtawe, Pontardawe, Rhos, Rhyd-y-fro, Trebanos, Ynysmeudwy",Neath Port Talbot
+8,SA9,SWANSEA,"Abercraf, Cefnbrynbrain, Cwmllynfell, Cwmtwrch, Lower Cwmtwrch, Rhiwfawr, Upper Cwmtwrch, Ystalyfera, Ystradgynlais, Ystradowen","Neath Port Talbot, Powys, Carmarthenshire"
+9,SA10,NEATH,"Aberdulais, Bryncoch, Cadoxton, Caewern, Coed Darcy, Crynant, Jersey Marine, Llandarcy, Neath Abbey, Onllwyn, Seven Sisters, Skewen",Neath Port Talbot
+10,SA11,NEATH,"Blaengwrach, Briton Ferry, Cimla, Glynneath, Neath town centre, Resolven, Tonmawr, Tonna",Neath Port Talbot
+11,SA12,PORT TALBOT,"Aberafan, Aberavon, Baglan, Cwmafan, Port Talbot town centre, Sandfields,",Neath Port Talbot
+12,SA13,PORT TALBOT,"Bryn, Cymmer, Margam, Taibach",Neath Port Talbot
+13,SA14,LLANELLI,"Llanelli (east), Bynea, Dafen",Carmarthenshire
+14,SA15,LLANELLI,"Llanelli (west and town centre), Felinfoel, Pontyates",Carmarthenshire
+15,SA16,BURRY PORT,"Burry Port, Pembrey",Carmarthenshire
+16,SA17,FERRYSIDE,"Ferryside, Trimsaran",Carmarthenshire
+17,SA17,KIDWELLY,"Kidwelly, Llansaint, Mynyddygarreg, Carway",Carmarthenshire
+18,SA18,AMMANFORD,"Ammanford, Betws, Garnswllt, Gwaun-Cae-Gurwen, Lower Brynamman, Upper Brynamman","Carmarthenshire, Neath Port Talbot, Swansea"
+19,SA19,LLANDEILO,Llandeilo,Carmarthenshire
+20,SA19,LLANGADOG,Llangadog,Carmarthenshire
+21,SA19,LLANWRDA,Llanwrda,Carmarthenshire
+22,SA20,LLANDOVERY,Llandovery,Carmarthenshire
+23,SA31,CARMARTHEN,"Carmarthen town centre, Cwmffrwd",Carmarthenshire
+24,SA32,CARMARTHEN,"Nantgaredig, Dryslwyn, Porthyrhyd",Carmarthenshire
+25,SA33,CARMARTHEN,"Bancyfelin, Pendine, Blaenycoed, St Clears",Carmarthenshire
+26,SA34,WHITLAND,Whitland,Carmarthenshire
+27,SA35,LLANFYRNACH,Llanfyrnach,Pembrokeshire
+28,SA36,GLOGUE,"Glogue, Hermon",Pembrokeshire
+29,SA37,BONCATH,"Boncath, Blaenffos",Pembrokeshire
+30,SA38,NEWCASTLE EMLYN,Newcastle Emlyn,"Carmarthenshire, Ceredigion"
+31,SA39,PENCADER,"Pencader, Llanfihangel-ar-Arth, Llanllwni","Carmarthenshire, Ceredigion"
+32,SA40,LLANYBYDDER,"Llanybydder, Llanwenog, Gorsgoch","Carmarthenshire, Ceredigion"
+33,SA41,CRYMYCH,"Crymych, Eglwyswrw",Pembrokeshire
+34,SA42,NEWPORT,"Newport, Dinas Cross",Pembrokeshire
+35,SA43,CARDIGAN,"Cardigan, Cilgerran, St Dogmaels","Ceredigion, Pembrokeshire"
+36,SA44,LLANDYSUL,"Llandysul, Dre-fach Felindre, Pentrecwrt","Ceredigion, Carmarthenshire"
+37,SA45,NEW QUAY,New Quay,Ceredigion
+38,SA46,ABERAERON,Aberaeron,Ceredigion
+39,SA47,LLANARTH,Llanarth,Ceredigion
+40,SA48,LAMPETER,Lampeter,Ceredigion
+41,SA48,ABERAERON,,non-geographic[3]
+42,SA61,HAVERFORDWEST,"Haverfordwest town centre, Merlin's Bridge",Pembrokeshire
+43,SA62,HAVERFORDWEST,"St Davids, Johnston",Pembrokeshire
+44,SA63,CLARBESTON ROAD,Clarbeston,Pembrokeshire
+45,SA64,GOODWICK,Goodwick,Pembrokeshire
+46,SA65,FISHGUARD,"Fishguard, Cwm Gwaun",Pembrokeshire
+47,SA66,CLYNDERWEN,Clynderwen,Pembrokeshire
+48,SA67,NARBERTH,Narberth,Pembrokeshire
+49,SA68,KILGETTY,Kilgetty,Pembrokeshire
+50,SA69,SAUNDERSFOOT,Saundersfoot,Pembrokeshire
+51,SA70,TENBY,"Tenby, Penally",Pembrokeshire
+52,SA71,PEMBROKE,Pembroke,Pembrokeshire
+53,SA72,PEMBROKE,,non-geographic[3][4]
+54,SA72,PEMBROKE DOCK,Pembroke Dock,Pembrokeshire
+55,SA73,MILFORD HAVEN,Milford Haven,Pembrokeshire
+56,SA80,SWANSEA,Department for Work and Pensions,non-geographic[3]
+57,SA99,SWANSEA,Driver and Vehicle Licensing Agency,non-geographic[3]

@@ -1,0 +1,36 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,IP1,IPSWICH,"North West Ipswich, Akenham",Ipswich
+1,IP2,IPSWICH,"South West Ipswich, Belstead, Wherstead, Stoke Park",Ipswich
+2,IP3,IPSWICH,"South East Ipswich, Ravenswood",Ipswich
+3,IP4,IPSWICH,North East Ipswich,Ipswich
+4,IP5,IPSWICH,"Rushmere St Andrew, Kesgrave, Martlesham Heath",East Suffolk
+5,IP6,IPSWICH,"Needham Market, Creeting St. Mary, Barham, Henley, Claydon, Witnesham","Mid Suffolk, East Suffolk"
+6,IP7,IPSWICH,"Hadleigh, Milden",Babergh
+7,IP8,IPSWICH,"Copdock, Belstead",Babergh
+8,IP9,IPSWICH,"Shotley Peninsula: Capel St Mary, Chelmondiston, Shotley",Babergh
+9,IP10,IPSWICH,"Kirton, Nacton, Levington",East Suffolk
+10,IP11,FELIXSTOWE,"Felixstowe, Trimley St. Martin, Trimley St. Mary",East Suffolk
+11,IP12,WOODBRIDGE,"Woodbridge, Orford",East Suffolk
+12,IP13,WOODBRIDGE,"Woodbridge, Easton, Framlingham, Little Bealings, Laxfield,","East Suffolk, Mid Suffolk"
+13,IP14,STOWMARKET,"Stowmarket, Stowupland",Mid Suffolk
+14,IP15,ALDEBURGH,Aldeburgh,East Suffolk
+15,IP16,LEISTON,"Leiston, Aldringham, Eastbridge, Sizewell, Theberton, Thorpeness",East Suffolk
+16,IP17,SAXMUNDHAM,Saxmundham,East Suffolk
+17,IP18,SOUTHWOLD,"Southwold, Easton Bavents, Reydon, Walberswick",East Suffolk
+18,IP19,HALESWORTH,"Cratfield, Ubbeston, Halesworth, Walpole Rumburgh",East Suffolk
+19,IP20,HARLESTON,"Mendham, Withersdale Street, Metfield, Wortwell, Redenhall","South Norfolk, East Suffolk"
+20,IP21,DISS,"Thorpe Abbotts, Pulham Market, Pulham St Mary, Wingfield","South Norfolk, Mid Suffolk"
+21,IP21,EYE,"Stradbroke, Fressingfield, Syleham","Mid Suffolk, South Norfolk"
+22,IP22,DISS,"Diss, Winfarthing, Burston, Roydon, Garboldisham, Botesdale","South Norfolk, Mid Suffolk"
+23,IP23,EYE,"Eye, Thorndon, Thwaite, Brome",Mid Suffolk
+24,IP24,THETFORD,"Thetford, Barnham, Great Hockham","Breckland, West Suffolk"
+25,IP25,THETFORD,"Watton, Saham Toney",Breckland
+26,IP26,THETFORD,"Hilborough, Northwold",Breckland
+27,IP27,BRANDON,"Brandon, Lakenheath",West Suffolk
+28,IP28,BURY ST. EDMUNDS,"Mildenhall, Culford, Red Lodge","West Suffolk, East Cambridgeshire"
+29,IP29,BURY ST. EDMUNDS,"Barrow, Shimpling",West Suffolk
+30,IP30,BURY ST. EDMUNDS,"Elmswell, Cockfield, Woolpit","West Suffolk, Mid Suffolk"
+31,IP31,BURY ST. EDMUNDS,"Ixworth, Thurston, Great Barton, Stanton","West Suffolk, Mid Suffolk"
+32,IP32,BURY ST. EDMUNDS,,West Suffolk
+33,IP33,BURY ST. EDMUNDS,Westley,West Suffolk
+34,IP98,DISS,Bulk Mail,non-geographic

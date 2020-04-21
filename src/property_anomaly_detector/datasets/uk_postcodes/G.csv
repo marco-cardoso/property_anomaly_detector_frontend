@@ -1,0 +1,57 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,G1,GLASGOW,Former C1 district: Merchant City,Glasgow City
+1,G2,GLASGOW,"Former C2 district: Blythswood Hill, Anderston (part)",Glasgow City
+2,G3,GLASGOW,"Former C3 district: Anderston, Finnieston, Garnethill, Park, Woodlands (part), Yorkhill",Glasgow City
+3,G4,GLASGOW,"Former C4 district: Calton (part), Cowcaddens (part), Drygate, Kelvinbridge, Townhead, Woodlands (part), Woodside (part)",Glasgow City
+4,G5,GLASGOW,Former C5 district: Gorbals,Glasgow City
+5,G9,GLASGOW,Newspaper Competitions,non-geographic
+6,G11,GLASGOW,"Former W1 district: Broomhill, Partick, Partickhill",Glasgow City
+7,G12,GLASGOW,"Former W2 district: West End (part), Cleveden, Dowanhill, Hillhead, Hyndland, Kelvindale, Kelvinside, Botanic Gardens, University of Glasgow",Glasgow City
+8,G13,GLASGOW,"Former W3 district: Anniesland, Knightswood, Yoker",Glasgow City
+9,G14,GLASGOW,"Former W4 district: Whiteinch, Scotstoun",Glasgow City
+10,G15,GLASGOW,Former W5 district: Drumchapel,Glasgow City
+11,G20,GLASGOW,"Former NW district: Maryhill, North Kelvinside, Ruchill",Glasgow City
+12,G21,GLASGOW,"Former N1 district: Balornock, Barmulloch, Cowlairs, Royston, Springburn, Sighthill",Glasgow City
+13,G22,GLASGOW,"Former N2 district: Milton, Parkhouse, Possilpark",Glasgow City
+14,G23,GLASGOW,"Former N3 district: Lambhill, Summerston",Glasgow City
+15,G31,GLASGOW,"Former E1 district: Dennistoun, Haghill, Parkhead (part)",Glasgow City
+16,G32,GLASGOW,"Former E2 district: Carmyle, Tollcross, Mount Vernon, Lightburn, Sandyhills, Shettleston, Springboig",Glasgow City
+17,G33,GLASGOW,"Former E3 district: Cardowan, Carntyne, Craigend, Cranhill, Garthamlock, Millerston, Provanmill, Queenslie, Riddrie, Robroyston, Ruchazie, Stepps, Wellhouse","North Lanarkshire, Glasgow City"
+18,G34,GLASGOW,"Former E4 district: Easterhouse, Easthall, Provanhall",Glasgow City
+19,G40,GLASGOW,"Former SE district: Bridgeton, Calton, Dalmarnock",Glasgow City
+20,G41,GLASGOW,"Former S1 district: Pollokshields, Shawlands",Glasgow City
+21,G42,GLASGOW,"Former S2 district: Battlefield, Govanhill, Mount Florida, Strathbungo (part), Toryglen",Glasgow City
+22,G43,GLASGOW,"Former S3 district: Mansewood, Newlands, Pollokshaws",Glasgow City
+23,G44,GLASGOW,"Former S4 district: Cathcart, Simshill, Croftfoot, King's Park, Muirend, Netherlee","Glasgow City, East Renfrewshire"
+24,G45,GLASGOW,Former S5 district: Castlemilk,Glasgow City
+25,G46,GLASGOW,"Former S6 district: Arden, Carnwadric, Deaconsbank, Giffnock, Kennishead, Thornliebank","East Renfrewshire, Glasgow City"
+26,G51 2,GLASGOW,"Former SW1 district: Govan, Ibrox, Drumoyne",Glasgow City
+27,G51 1,GLASGOW,"Former SW1 district: Cessnock, Plantation",Glasgow City
+28,G52,GLASGOW,"Former SW2 district: Cardonald, Hillington, Penilee, Mosspark",Glasgow City
+29,G53,GLASGOW,"Former SW3 district: Darnley, Pollok, Crookston, Parkhouse, Priesthill, Nitshill, Southpark",Glasgow City
+30,G58,GLASGOW,"National Savings and Investments, Cowglen",non-geographic
+31,G60,GLASGOW,"Bowling, Old Kilpatrick",West Dunbartonshire
+32,G61,GLASGOW,Bearsden,East Dunbartonshire
+33,G62,GLASGOW,"Baldernock, Milngavie, Mugdock","East Dunbartonshire, Stirling"
+34,G63,GLASGOW,"Balfron, Balmaha, Blanefield, Croftamie, Drymen, Dumgoyne, Fintry, Killearn, Rowardennan, Strathblane",Stirling
+35,G64,GLASGOW,"Bishopbriggs, Torrance",East Dunbartonshire
+36,G65,GLASGOW,"Croy, Kilsyth, Twechar","North Lanarkshire, East Dunbartonshire"
+37,G66,GLASGOW,"Clachan of Campsie, Haughhead, Kirkintilloch, Lennoxtown, Lenzie, Milton of Campsie",East Dunbartonshire
+38,G67,GLASGOW,Cumbernauld (south),North Lanarkshire
+39,G68,GLASGOW,"Cumbernauld (north), Dullatur",North Lanarkshire
+40,G69,GLASGOW,"Baillieston, Bargeddie, Chryston, Garrowhill, Gartcosh, Gartloch, Moodiesburn, Muirhead, Springhill","Glasgow City, North Lanarkshire"
+41,G70,GLASGOW,"HM Revenue and Customs, Cumbernauld",non-geographic
+42,G71,GLASGOW,"Birkenshaw, Bothwell, Broomhouse, Tannochside, Uddingston, Viewpark","Glasgow City, North Lanarkshire, South Lanarkshire"
+43,G72,GLASGOW,"Blantyre, Cambuslang",South Lanarkshire
+44,G73,GLASGOW,Rutherglen,South Lanarkshire
+45,G74,GLASGOW,"East Kilbride (north), Thorntonhall",South Lanarkshire
+46,G75,GLASGOW,"Auldhouse, East Kilbride (south)",South Lanarkshire
+47,G76,GLASGOW,"Busby, Carmunnock, Clarkston, Eaglesham, Waterfoot, parts of East Kilbride","East Renfrewshire, Glasgow City"
+48,G77,GLASGOW,Newton Mearns,East Renfrewshire
+49,G78,GLASGOW,"Barrhead, Neilston, Uplawmoor",East Renfrewshire
+50,G79,GLASGOW,"HM Revenue and Customs, East Kilbride",non-geographic
+51,G81,CLYDEBANK,"Dalmuir, Duntocher, Faifley, Hardgate",West Dunbartonshire
+52,G82,DUMBARTON,"Cardross, Milton, Renton","West Dunbartonshire, Argyll and Bute"
+53,G83,ALEXANDRIA,"Alexandria, Arrochar, Aldochlay, Ardlui, Balloch, Bonhill, Gartocharn, Inverarnan, Jamestown, Luss, Tarbet","West Dunbartonshire, Argyll and Bute, Stirling"
+54,G84,HELENSBURGH,"Clynder, Cove, Garelochhead, Kilcreggan, Rhu, Rosneath, Shandon",Argyll and Bute
+55,G90,GLASGOW,Department for Work and Pensions,non-geographic

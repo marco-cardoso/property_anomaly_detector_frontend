@@ -1,0 +1,19 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,WF1,WAKEFIELD,"Eastmoor, Kirkthorpe, Newton Hill, Outwood, Wakefield City Centre",Wakefield
+1,WF2,WAKEFIELD,"Alverthorpe, Carr Gate, Flanshaw, Hall Green, Kirkhamgate, Kettlethorpe, Lupset, Portobello, Newmillerdam, Sandal, Thornes, Walton (Wakefield), Wrenthorpe, Woolgreaves, Peacock, Pledwick",Wakefield
+2,WF3,WAKEFIELD,"Carlton, East Ardsley, Lofthouse, Lofthouse Gate, Robin Hood, Stanley, Thorpe, Tingley, West Ardsley","Leeds, Wakefield"
+3,WF4,WAKEFIELD,"Crigglestone, Crofton, Durkar, Flockton, Havercroft, Horbury, Netherton, New Crofton, Ryhill, West Bretton, Woolley","Wakefield, Kirklees"
+4,WF5,OSSETT,"Gawthorpe, Healey, Ossett (very small area around Wakefield Road falls in the Kirklees district)","Wakefield, Kirklees"
+5,WF6,NORMANTON,"Altofts, Normanton",Wakefield
+6,WF7,PONTEFRACT,"Ackworth Moor Top, Ackton, Featherstone, Purston Jaglin, Streethouse",Wakefield
+7,WF8,PONTEFRACT,"Darrington, Kirk Smeaton, Pontefract (Monkhill), Thorpe Audlin","Wakefield, Selby, Doncaster"
+8,WF9,PONTEFRACT,"Badsworth, Fitzwilliam, Hemsworth, Kinsley, South Elmsall, South Kirkby, Upton, Wentbridge","Wakefield, Doncaster"
+9,WF10,CASTLEFORD,"Airedale, Allerton Bywater, Castleford, Glasshoughton, Ledston, New Fryston","Wakefield, Leeds"
+10,WF11,KNOTTINGLEY,"Brotherton, Byram, Cridling Stubbs, Fairburn, Kellingley, Knottingley","Wakefield, Selby"
+11,WF12,DEWSBURY,"Chickenley, Dewsbury, Savile Town, Shaw Cross, Thornhill, Thornhill Lees","Kirklees, Wakefield"
+12,WF13,DEWSBURY,"Dewsbury Moor, Ravensthorpe",Kirklees
+13,WF14,MIRFIELD,"Hopton, Mirfield",Kirklees
+14,WF15,LIVERSEDGE,"Roberttown, Liversedge",Kirklees
+15,WF16,HECKMONDWIKE,Heckmondwike,Kirklees
+16,WF17,BATLEY,"Birstall, Batley, Staincliffe",Kirklees
+17,WF90,WAKEFIELD,Redcats,non-geographic[3]

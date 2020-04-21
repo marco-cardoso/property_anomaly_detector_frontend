@@ -1,0 +1,14 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,CW1,CREWE,"Crewe (north), Haslington, Leighton",Cheshire East
+1,CW2,CREWE,"Crewe (south), Wistaston, Woolstanwood",Cheshire East
+2,CW3,CREWE,"Madeley, Betley, Woore, Audlem","Cheshire East, Newcastle-under-Lyme, Shropshire"
+3,CW4,CREWE,"Holmes Chapel, Goostrey, Cranage",Cheshire East
+4,CW5,NANTWICH,"Nantwich, Willaston, Sound",Cheshire East
+5,CW6,TARPORLEY,"Tarporley, Winsford Rural West",Cheshire West and Chester
+6,CW7,WINSFORD,"Winsford (Town), Wharton, Over, Glebe Green, Darnhall, Stanthorne, Bostock, Wimboldsley",Cheshire West and Chester
+7,CW8,NORTHWICH,"Northwich (west), Hartford, Weaverham, Castle, Greenbank, Cuddington, Sandiway",Cheshire West and Chester
+8,CW9,NORTHWICH,"Northwich (east), Wincham, Lostock Gralam, Rudheath, Leftwich, Davenham, Kingsmead, Antrobus, Comberbach, Aston by Budworth","Cheshire West and Chester, Cheshire East"
+9,CW10,MIDDLEWICH,"Middlewich, Winsford Rural East","Cheshire East, Cheshire West and Chester"
+10,CW11,SANDBACH,"Sandbach, Ettiley Heath, Elworth, Wheelock",Cheshire East
+11,CW12,CONGLETON,"Congleton, North Rode","Cheshire East, Staffordshire Moorlands"
+12,CW98,CREWE,,non-geographic

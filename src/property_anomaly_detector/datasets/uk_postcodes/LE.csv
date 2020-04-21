@@ -1,0 +1,30 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,LE1,LEICESTER,Leicester,Leicester
+1,LE2,LEICESTER,"Oadby, Knighton, Highfields, Aylestone, Glen Parva, Stoughton, Little Stretton","Leicester, Oadby and Wigston, Harborough, Blaby"
+2,LE3,LEICESTER,"Braunstone, Glenfield, New Parks, Groby Road (A50), Leicester Forest East, Westcotes","Leicester, Blaby"
+3,LE4,LEICESTER,"Beaumont Leys, Belgrave, Birstall, Thurmaston","Leicester, Charnwood"
+4,LE5,LEICESTER,"Hamilton, Thurnby Lodge, Evington",Leicester
+5,LE6,LEICESTER,"Ratby, Groby, Newtown Linford","Hinckley and Bosworth, Charnwood"
+6,LE7,LEICESTER,"Scraptoft, Anstey, Billesdon, Gaddesby, Hungarton, Rearsby, Tilton on the Hill, Tugby, Cropston, Thurcaston, Rothley, Barkby, Syston, Wanlip","Charnwood, Harborough, Melton"
+7,LE8,LEICESTER,"Blaby, Great Glen, Fleckney, Kibworth, Peatling Magna, Countesthorpe, Whetstone",
+8,LE9,LEICESTER,"Kirby Muxloe, Stoney Stanton, Cosby, Huncote, Croft, Desford, Newbold Verdon, Kirkby Mallory, Earl Shilton, Barwell, Sapcote, Sutton in the Elms, Broughton Astley, Thurlaston, Potters Marston",
+9,LE10,HINCKLEY,"Hinckley, Burbage, Wolvey, Sharnford, Aston Flamville, Copston Magna","Hinckley and Bosworth, Blaby, Rugby"
+10,LE11,LOUGHBOROUGH,"Loughborough, Nanpantan",Charnwood
+11,LE12,LOUGHBOROUGH,"East Leake, West Leake, Sutton Bonington, Long Whatton, Mountsorrel, Shepshed, Belton, Quorn, Barrow Upon Soar, Sileby, Wymeswold","Charnwood, North West Leicestershire, Rushcliffe"
+12,LE13,MELTON MOWBRAY,Melton Mowbray,Melton
+13,LE14,MELTON MOWBRAY,"Ashby Folville, Brooksby, Harby, Hickling, Hoby, Ragdale, Rotherby, Scalford, Somerby, Stonesby, Waltham on the Wolds, Wymondham","Melton, Rushcliffe"
+14,LE15,OAKHAM,"Oakham, Cold Overton, Empingham, Knossington, Langham, Manton, Owston and Newbold, Thistleton, Uppingham, Whissendine","Rutland, Melton, Harborough"
+15,LE16,MARKET HARBOROUGH,"Market Harborough, Arthingworth, Braybrooke, Caldecott, Clipston, East Carlton, East Farndon, East Langton, Great Oxendon, Hallaton, Marston Trussell, Medbourne, Rockingham, Sibbertoft, Stoke Albany","Harborough, Daventry, Kettering, Corby, Rutland"
+16,LE17,LUTTERWORTH,"Lutterworth, Leire, Swinford, Bitteswell, Ullesthorpe, Theddingworth, Gilmorton, Catthorpe, Claybrooke Magna, Wibtoft","Harborough, Rugby"
+17,LE18,WIGSTON,"Wigston, South Wigston, Kilby","Oadby and Wigston, Blaby"
+18,LE19,LEICESTER,"Narborough, Enderby, Littlethorpe",Blaby
+19,LE21,LEICESTER,,non-geographic
+20,LE41,LEICESTER,Large user (otherwise in LE4),non-geographic
+21,LE55,LEICESTER,,non-geographic
+22,LE65,ASHBY-DE-LA-ZOUCH,"Ashby-de-la-Zouch, Boundary, Calke, Smisby, Willesley, Worthington","North West Leicestershire, South Derbyshire"
+23,LE67,COALVILLE,Coalville,North West Leicestershire
+24,LE67,IBSTOCK,Ibstock,North West Leicestershire
+25,LE67,MARKFIELD,Markfield,Hinckley and Bosworth
+26,LE87,LEICESTER,,non-geographic
+27,LE94,LEICESTER,,non-geographic
+28,LE95,LEICESTER,,non-geographic

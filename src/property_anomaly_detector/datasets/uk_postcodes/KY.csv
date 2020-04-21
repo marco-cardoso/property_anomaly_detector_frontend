@@ -1,0 +1,20 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,KY1,KIRKCALDY,"Kirkcaldy (east), Dysart, Thornton, Wemyss",Fife
+1,KY2,KIRKCALDY,"Kirkcaldy (west), Auchtertool",Fife
+2,KY3,BURNTISLAND,"Burntisland, Kinghorn, Aberdour",Fife
+3,KY4,COWDENBEATH,"Cowdenbeath, Hill of Beath, Crossgates",Fife
+4,KY4,KELTY,Kelty,Fife
+5,KY5,LOCHGELLY,"Lochgelly, Cardenden, Ballingry, Kinglassie",Fife
+6,KY6,GLENROTHES,"Glenrothes (west), Leslie, Kinnesswood","Fife, Perth and Kinross"
+7,KY7,GLENROTHES,"Glenrothes (centre and east), Markinch, Star",Fife
+8,KY8,LEVEN,"Leven, Buckhaven, Methil, Methilhill, Largo, Windygates, Kennoway",Fife
+9,KY9,LEVEN,"Earlsferry, Elie, Kilconquhar, Largoward",Fife
+10,KY10,ANSTRUTHER,"Anstruther, Cellardyke, Kilrenny, Pittenweem, St Monans, Crail, Arncroach",Fife
+11,KY11,DUNFERMLINE,"Dunfermline (south and east), Rosyth, Dalgety Bay, Limekilns, Charlestown",Fife
+12,KY11,INVERKEITHING,"Inverkeithing, North Queensferry",Fife
+13,KY12,DUNFERMLINE,"Dunfermline (centre, north and west), Rumbling Bridge, Powmill, Kincardine, Culross",Fife
+14,KY13,KINROSS,"Kinross, Milnathort, Balado, Scotlandwell",Perth and Kinross
+15,KY14,CUPAR,"Newburgh, Glenfarg, Gateside","Fife, Perth and Kinross"
+16,KY15,CUPAR,"Cupar, Ceres, Kilmany, Strathmiglo, Falkland, Ladybank, Freuchie",Fife
+17,KY16,ST. ANDREWS,"St Andrews, Kingsbarns, Dunino, Guardbridge, St. Michaels, Balmullo",Fife
+18,KY99,DUNFERMLINE,VISA Special Postcode,non-geographic

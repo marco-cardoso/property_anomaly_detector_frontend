@@ -1,0 +1,38 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,BN1,BRIGHTON,"Brighton, Coldean, Falmer, Hollingbury, Patcham, Preston, Stanmer, Withdean","Brighton and Hove, Lewes"
+1,BN2,BRIGHTON,"Brighton, Bevendean, Brighton Marina, Kemptown, Moulsecoomb, Ovingdean, Rottingdean, Saltdean, Woodingdean","Brighton and Hove, Lewes"
+2,BN3,HOVE,"Hove, Aldrington, Hangleton, West Blatchington",Brighton and Hove
+3,BN5,HENFIELD,"Henfield, Blackstone, Edburton, Fulking, Small Dole, Wineham, Woodmancote","Horsham, Mid Sussex"
+4,BN6,HASSOCKS,"Hassocks, Albourne, Clayton, Ditchling, Goddards Green, Hurstpierpoint, Keymer, Newtimber, Sayers Common, Streat, Westmeston","Lewes, Mid Sussex"
+5,BN7,LEWES,"Lewes, Cooksbridge, East Chiltington, Iford, Kingston, Offham, Plumpton, Plumpton Green, Rodmell, Southease, Swanborough, Telscombe",Lewes
+6,BN8,LEWES,"Barcombe, Barcombe Cross, Beddingham, Chailey Green, Chiddingly, East Hoathly, Firle, Glynde, Halland, Hamsey, Holmes Hill, Laughton, Newick, North Chailey, Ringmer, Ripe, Shortgate, South Chailey, Southerham, Stoneham, Whitesmith","Lewes, Wealden"
+7,BN9,NEWHAVEN,"Newhaven, Piddinghoe, South Heighton, Tarring Neville",Lewes
+8,BN10,PEACEHAVEN,"Peacehaven, Telscombe Cliffs",Lewes
+9,BN11,WORTHING,Worthing,Worthing
+10,BN12,WORTHING,"Worthing, Ferring, Goring-by-Sea","Arun, Worthing"
+11,BN13,WORTHING,"Worthing, Clapham, Durrington, High Salvington, Patching, Tarring","Arun, Worthing"
+12,BN14,WORTHING,"Worthing, Broadwater, Findon, Northend, Tarring","Arun, Worthing"
+13,BN15,LANCING,"Lancing, Coombes, Sompting","Adur, Worthing"
+14,BN16,LITTLEHAMPTON,"Angmering, East Preston, Kingston Gorse, Rustington",Arun
+15,BN17,LITTLEHAMPTON,"Littlehampton, Climping, Lyminster, Wick",Arun
+16,BN18,ARUNDEL,"Arundel, Amberley, Binsted, Burpham, Crossbush, Fontwell, Ford, Houghton, Madehurst, Poling, Slindon, Slindon Common, South Stoke, Tortington, Walberton, Warningcamp, Wepham, Yapton","Arun, Horsham"
+17,BN20,EASTBOURNE,"Eastbourne, Beachy Head, East Dean, Friston, Old Town, Ratton, Wannock, Willingdon","Eastbourne, Wealden"
+18,BN21,EASTBOURNE,"Eastbourne, Old Town",Eastbourne
+19,BN22,EASTBOURNE,"Eastbourne, Hampden Park, Willingdon","Eastbourne, Wealden"
+20,BN23,EASTBOURNE,"Eastbourne, Friday Street, Langney, Sovereign Harbour",Eastbourne
+21,BN24,PEVENSEY,"Pevensey, Beachlands, Hankham, Normans Bay, Pevensey Bay, Stone Cross, Westham",Wealden
+22,BN25,SEAFORD,"Seaford, Bishopstone, Cuckmere Haven, Exceat, Norton, Rookery Hill, Westdean","Lewes, Wealden"
+23,BN26,POLEGATE,"Polegate, Alciston, Alfriston, Arlington, Berwick, Caneheath, Filching, Folkington, Jevington, Litlington, Lullington, Milton Street, Sayerland, Selmeston, Summerhill, Wilmington",Wealden
+24,BN27,HAILSHAM,"Hailsham, Amberstone, Bodle Street, Bodle Street Green, Boreham Street, Carters Corner, Chalvington, Cowbeech, Downash, Golden Cross, Hellingly, Herstmonceux, Horsebridge, Lower Dicker, Lower Horsebridge, Magham Down, Mulbrooks, Rickney, Trolliloes, Upper Dicker, Wartling, Windmill Hill",Wealden
+25,BN41,BRIGHTON,"Fishersgate, Portslade","Adur, Brighton and Hove"
+26,BN42,BRIGHTON,Southwick,Adur
+27,BN43,SHOREHAM-BY-SEA,Shoreham-by-Sea,Adur
+28,BN44,STEYNING,"Steyning, Ashurst, Botolphs, Bramber, Upper Beeding, Wiston",Horsham
+29,BN45,BRIGHTON,"Poynings, Pyecombe, Saddlescombe",Mid Sussex
+30,BN50,BRIGHTON,Brighton PO boxes,non-geographic[3]
+31,BN51,BRIGHTON,Rottingdean PO boxes,non-geographic[3]
+32,BN52,HOVE,Hove PO boxes,non-geographic[3]
+33,BN88,BRIGHTON,American Express,non-geographic[3]
+34,BN91,WORTHING[4],RR Donnelley,non-geographic[3]
+35,BN95,LANCING[5],Prudential,non-geographic[3]
+36,BN99,LANCING,Equiniti Limited (formerly Lloyds TSB Registrars),non-geographic[3]

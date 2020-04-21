@@ -1,0 +1,34 @@
+,Postcode district,Post town,Coverage,Local authority area
+0,NG1,NOTTINGHAM,Nottingham city centre,Nottingham
+1,NG2,NOTTINGHAM,"Nottingham city centre, Colwick Park, Sneinton, The Meadows, West Bridgford","Nottingham, Rushcliffe ,"
+2,NG3,NOTTINGHAM,"Carlton, Sneinton, St Ann's, Mapperley","Gedling, Nottingham"
+3,NG4,NOTTINGHAM,"Gedling Village, Netherfield, Carlton, Colwick",Gedling
+4,NG5,NOTTINGHAM,"Sherwood, Arnold, Bestwood, Carrington, Top Valley, Rise Park","Nottingham, Gedling"
+5,NG6,NOTTINGHAM,"Bestwood Village, Bulwell, Old Basford","Nottingham, Gedling"
+6,NG7,NOTTINGHAM,"New Basford, Forest Fields, Hyson Green, Radford, Lenton",Nottingham
+7,NG8,NOTTINGHAM,"Aspley, Wollaton, Whitemoor, Bilborough, Strelley","Nottingham, Broxtowe"
+8,NG9,NOTTINGHAM,"Beeston, Stapleford, Lenton Abbey, Chilwell, Trowell, Bramcote","Broxtowe, Nottingham"
+9,NG10,NOTTINGHAM,"Long Eaton, Sawley, Sandiacre",Erewash
+10,NG11,NOTTINGHAM,"Clifton, Ruddington, Gotham, Kingston on Soar","Nottingham, Rushcliffe"
+11,NG12,NOTTINGHAM,"Cotgrave, Radcliffe on Trent, Keyworth, Edwalton",Rushcliffe
+12,NG13,NOTTINGHAM,"Bingham, Whatton, Bottesford, Aslockton","Rushcliffe, Melton"
+13,NG14,NOTTINGHAM,"Calverton, Lowdham, Burton Joyce, Gunthorpe",Gedling
+14,NG15,NOTTINGHAM,"Hucknall, Ravenshead, Newstead","Ashfield, Gedling"
+15,NG16,NOTTINGHAM,"Kimberley, Eastwood, Nuthall, Langley Mill, Pinxton, Selston, Awsworth, Ironville, Jacksdale, Westwood, Underwood, Brinsley, Watnall","Amber Valley, Ashfield Bolsover, Broxtowe"
+16,NG17,NOTTINGHAM,Kirkby-in-Ashfield,Ashfield
+17,NG17,SUTTON-IN-ASHFIELD,"Sutton-in-Ashfield, Stanton Hill, Skegby",Ashfield
+18,NG18,MANSFIELD,Mansfield,Mansfield
+19,NG19,MANSFIELD,"Mansfield Woodhouse, Forest Town",Mansfield
+20,NG20,MANSFIELD,"Shirebrook, Market Warsop","Bolsover, Mansfield"
+21,NG21,MANSFIELD,"Rainworth, Edwinstowe, Clipstone, Blidworth",Newark and Sherwood
+22,NG22,NEWARK,"Bilsthorpe, Newark-on-Trent",Newark and Sherwood
+23,NG23,NEWARK,"Newark-on-Trent, Collingham, Long Bennington",Newark and Sherwood
+24,NG24,NEWARK,"Newark-on-Trent, Balderton",Newark and Sherwood
+25,NG25,SOUTHWELL,Southwell,Newark and Sherwood
+26,NG31,GRANTHAM,Grantham,South Kesteven
+27,NG32,GRANTHAM,"Grantham, Croxton Kerrial, Sedgebrook","South Kesteven, Melton"
+28,NG33,GRANTHAM,"Grantham, Castle Bytham, Corby Glen",South Kesteven
+29,NG34,SLEAFORD,"Sleaford, Scredington",North Kesteven
+30,NG70,MANSFIELD,Special Business Reply Service,non-geographic
+31,NG80,NOTTINGHAM,Experian,non-geographic
+32,NG90,NOTTINGHAM,Boots UK,non-geographic
