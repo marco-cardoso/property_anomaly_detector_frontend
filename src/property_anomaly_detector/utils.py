@@ -1,5 +1,6 @@
 import re
 
+
 def clean_string(text: str) -> str:
     """
     It removes special characters from the string. Such as : \t \n \r etc...
@@ -20,7 +21,7 @@ def get_html_value(element, index) -> str:
         return clean_string(element.findChildren("td")[index].text)
     except IndexError:
         return None
-    
+
 
 def convert_station_distance(element) -> float:
     """
