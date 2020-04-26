@@ -6,13 +6,32 @@ from bs4 import BeautifulSoup
 from property_anomaly_detector.database import Database
 from property_anomaly_detector.utils import *
 
+import traceback
+
 database = Database()
 
 
 def sleep(function):
     def wrapper(*args, **kwargs):
-        result = function(*args, **kwargs)
-        time.sleep(0.5)
+
+        result = None
+
+        while True:
+            try:
+                result = function(*args, **kwargs)
+            except requests.exceptions.ConnectionError:
+                print("Out of connection - Trying again ...")
+                time.sleep(1)
+                continue
+            except Exception :
+                print(traceback.format_exc())
+                # There's nothing to do in this specific case
+                # Proceed ...
+                break
+            else:
+                time.sleep(0.5)
+                break
+
         return result
 
     return wrapper
@@ -26,7 +45,7 @@ class Requests():
         self.dst_code_url = "https://www.rightmove.co.uk/typeAhead/uknostreet/"
 
     @sleep
-    def get_district_code(self, district: str) -> dict:
+    def get_district_code(self, district: str):
 
         district = district.upper().replace(" ", "")
         splitted = [district[i:i + 2] + "/" for i in range(0, len(district), 2)]
@@ -44,18 +63,16 @@ class Requests():
 
         # Removing the string REGION^ from the text
         location_identifier['locationIdentifier'] = location_identifier['locationIdentifier'].split("^")[1]
-
+        print(location_identifier)
         database.insert_district(location_identifier)
 
     @sleep
-    def get_property_information(self, path: str):
+    def get_property_information(self, district: str, path: str):
         url = self.main_url + path
 
         # This try-exception is necessary since some observations presented
         # a few errors. 7/27411
         try:
-
-            print("Getting the data from " + url + " ...")
 
             response = requests.get(url)
 
@@ -118,21 +135,20 @@ class Requests():
                 'latitude': latitude,
                 'longitude': longitude,
                 'stations': stations,
-                "amt_stations": len(stations)
+                "amt_stations": len(stations),
+                'district': district
             }
 
             database.insert_property(document)
-            print("Getting the data from " + url + " ...DONE")
-        except:
-            print("Error " + url)
+        except Exception as e:
             database.save_error(url)
+            print("Saving the error")
+            raise e
 
     @sleep
-    def get_district_links(self, index: int, district: str):
-
-        district = district.replace("^", "%")
+    def get_properties(self, district_nb, index):
         url = "https://www.rightmove.co.uk/property-to-rent/find.html?" \
-              f"locationIdentifier=REGION%5E{district}&" \
+              f"locationIdentifier=OUTCODE%5E{district_nb}&" \
               f"index={index}&" \
               "propertyTypes=&" \
               "includeLetAgreed=true&" \
@@ -142,22 +158,4 @@ class Requests():
               "keywords="
 
         response = requests.get(url)
-        print(url)
-
-        soup = BeautifulSoup(response.text, features="html.parser")
-
-        anchors = soup.find_all("a", {"class": "propertyCard-link"})
-        unique_links = set([a.attrs['href'] for a in anchors])
-
-        if len(unique_links) > 0:
-            database.save_processed_links(
-                {
-                    'index': index,
-                    'created_at': datetime.now(),
-                    'links': list(unique_links)
-                }
-            )
-            print("saved")
-            return unique_links
-
-        return unique_links
+        return BeautifulSoup(response.text, features="html.parser")

@@ -10,15 +10,20 @@ requests = req.Requests()
 
 
 def get_district_codes():
+    """
+    It gets the website codes for the London districts located at the district_names.csv
+    :return:
+    """
     outputs = database.get_districts()
 
     if len(outputs) == 0:
         districts = np.genfromtxt("district_names.csv", delimiter=",", dtype=str, usecols=[1])
-        with cf.ThreadPoolExecutor(max_workers=50) as executor:
-            results = executor.map(requests.get_district_code, districts)
 
-        # We need to add tower_hamlets manually since we're not separating the 
-        # district names by syllables
+        with cf.ThreadPoolExecutor(max_workers=50) as executor:
+            executor.map(requests.get_district_code, districts)
+
+        # We need to add tower_hamlets manually since it does not follow the URL pattern
+        # used by the other districts
         tower_hamlets = {
             "displayName": "Tower Hamlets (London Borough)",
             "locationIdentifier": "61417",

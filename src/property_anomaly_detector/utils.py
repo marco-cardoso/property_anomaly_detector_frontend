@@ -1,4 +1,9 @@
+from os import path
+
 import re
+import pandas as pd
+
+DATASETS_FOLDER_PATH = path.join("..", "datasets", "uk_postcodes")
 
 
 def clean_string(text: str) -> str:
@@ -37,3 +42,20 @@ def convert_station_distance(element) -> float:
             clean_string(element)
         )[0][0]
     )
+
+
+def get_uk_districts():
+    postcodes_path = path.join(DATASETS_FOLDER_PATH, "postcodes.csv")
+    postcodes_df = pd.read_csv(postcodes_path)
+
+    postcodes = postcodes_df['Postcode area'].values
+
+    districts_df = pd.concat(
+        [*map(
+            lambda postcode:
+            pd.read_csv(path.join(DATASETS_FOLDER_PATH, f"{postcode}.csv")), postcodes)
+         ]
+    )
+
+    districts = districts_df['Postcode district'].values
+    return districts
