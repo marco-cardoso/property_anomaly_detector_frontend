@@ -1,6 +1,9 @@
-from property_anomaly_detector.database.configs import database_host, database_port
+import os
 
 from pymongo import MongoClient
+
+database_host = os.environ['MONGO_HOST']
+database_port = os.environ['MONGO_PORT']
 
 
 class Database:
