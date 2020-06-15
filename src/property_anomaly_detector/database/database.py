@@ -43,3 +43,10 @@ class Database:
 
     def get_properties(self, default_projection=DEFAULT_PROPS_PROJ):
         return list(self.properties.find({}, default_projection))
+
+    def insert_properties(self, properties: list):
+        """
+        List of dictionaries representing the properties
+        :param properties: List of dictionaries representing the properties
+        """
+        self.properties.insert_many(properties)
