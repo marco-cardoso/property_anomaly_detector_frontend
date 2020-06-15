@@ -21,7 +21,7 @@ class Database:
         Database constructor
         :param database_name: A string with the database_name
         """
-        self.client = MongoClient(database_host, database_port)
+        self.client = MongoClient(database_host, int(database_port))
 
         database = self.client[database_name]
 

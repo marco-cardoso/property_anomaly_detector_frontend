@@ -27,8 +27,8 @@ logging.basicConfig(
 
 
 def main():
-    for district in LONDON_DISTRICTS.values:
-        logging.info(f"Collecting {district[0]}  properties !")
+    for idx, district in enumerate(LONDON_DISTRICTS.values):
+        logging.info(f"Collecting {district[0]} properties !")
 
         for i in range(0, 100):
             url = f"http://api.zoopla.co.uk/api/v1/property_listings.json?" \
@@ -38,10 +38,21 @@ def main():
             if response.status_code == 200:
 
                 properties = response.json()['listing']
+
+                if len(properties) == 0:
+                    logging.info(
+                        f"{idx + 1}/{len(LONDON_DISTRICTS.values)} District : {district[0]}  | Page {i} | "
+                        f"No more properties available for this district !!")
+                    break
+
                 db.insert_properties(properties)
-                logging.info(f"District : {district[0]}  | Page {i} | {len(properties)} properties successfully saved !")
+                logging.info(
+                    f"{idx + 1}/{len(LONDON_DISTRICTS.values)} District : {district[0]}  | Page {i} | {len(properties)} "
+                    f"properties successfully saved !")
             elif response.status_code == 400:
-                logging.info(f"District : {district[0]}  | Page {i} | Something went wrong !!")
+                logging.info(
+                    f"{idx + 1}/{len(LONDON_DISTRICTS.values)} District : {district[0]}  | Page {i} | "
+                    f"Something went wrong !!")
                 break
 
             sleep(1)
