@@ -36,6 +36,7 @@ def download_postcode_areas() -> pd.DataFrame:
 
    This method downloads all UK postcode areas and saves them in a single CSV file
    called postcodes.csv located at datasets/uk_postcodes
+
    :returns: A Pandas dataframe with all UK postcode areas
    """
 

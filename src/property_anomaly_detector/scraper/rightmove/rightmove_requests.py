@@ -1,17 +1,51 @@
+import re
 import time
-from datetime import datetime
+import traceback
 
 import requests
 from bs4 import BeautifulSoup
+from property_anomaly_detector import utils
 from property_anomaly_detector.database import Database
-from property_anomaly_detector.utils import *
-
-import traceback
 
 database = Database()
 
 
+def get_html_value(element, index) -> str:
+    """
+    It gets the value from the TD for the given TR
+    :param element: The Beautiful Soup object with the TR
+    :param index: The column index of the element, 0 = title, 1 = value.
+    :return: A string with the letting information
+    """
+    try:
+        return utils.clean_string(element.findChildren("td")[index].text)
+    except IndexError:
+        return None
+
+
+def convert_station_distance(element) -> float:
+    """
+    The string distance has the format ( %f.%f mi ), in order to extract
+    only the numerical value this method is applying the regex method
+    'findall' and then casting to float value
+    :param element: The Beautiful Soup object with the small html node
+    :return: A float value with the distance in mi
+    """
+    return float(
+        re.findall(
+            "(([-0-9_\.]+)\w+)",
+            utils.clean_string(element)
+        )[0][0]
+    )
+
+
 def sleep(function):
+    """
+    Decorator to make the requests to rightmove
+    :param function: The function which makes the request
+    :return: The decorator function
+    """
+
     def wrapper(*args, **kwargs):
 
         result = None
@@ -23,7 +57,7 @@ def sleep(function):
                 print("Out of connection - Trying again ...")
                 time.sleep(1)
                 continue
-            except Exception :
+            except Exception:
                 print(traceback.format_exc())
                 # There's nothing to do in this specific case
                 # Proceed ...
@@ -37,7 +71,11 @@ def sleep(function):
     return wrapper
 
 
-class Requests():
+class Requests:
+    """
+    This class has methods to make requests and parse data from
+    Rightmove website
+    """
 
     def __init__(self):
         super().__init__()
@@ -46,6 +84,13 @@ class Requests():
 
     @sleep
     def get_district_code(self, district: str):
+        """
+
+        It gets the website specific district code for a UK district and
+        saves into the database
+
+        :param district: A String with the UK district
+        """
 
         district = district.upper().replace(" ", "")
         splitted = [district[i:i + 2] + "/" for i in range(0, len(district), 2)]
@@ -67,11 +112,18 @@ class Requests():
         database.insert_district(location_identifier)
 
     @sleep
-    def get_property_information(self, district: str, path: str):
-        url = self.main_url + path
+    def get_property_information(self, district_name: str, property_url: str):
+        """
+        Over the listing pages there are multiple properties. Each property has an unique
+        URL and details. This method collects the details of a property based on its unique
+        URL.
 
-        # This try-exception is necessary since some observations presented
-        # a few errors. 7/27411
+        :param district_name: A String with the district name which the property is located.
+        This will be used to identify the property in the database.
+        :param property_url: A String with the URL of the property.
+        """
+        url = self.main_url + property_url
+
         try:
 
             response = requests.get(url)
@@ -83,16 +135,16 @@ class Requests():
             # Header attributes
             property_rent_and_price_div = soup.find("div", {"class": "property-header-bedroom-and-price"})
 
-            title = clean_string(property_rent_and_price_div.findChildren("h1")[0].text)
+            title = utils.clean_string(property_rent_and_price_div.findChildren("h1")[0].text)
 
-            address = clean_string(property_rent_and_price_div.findChildren("address")[0].text)
-            price = clean_string(soup.find("p", {"id": "propertyHeaderPrice"}).findChildren("strong")[0].text)
+            address = utils.clean_string(property_rent_and_price_div.findChildren("address")[0].text)
+            price = utils.clean_string(soup.find("p", {"id": "propertyHeaderPrice"}).findChildren("strong")[0].text)
 
             # Letting section attributes / Optional attributes
             letting_div = soup.find("div", {"id": "lettingInformation"})
             letting_table_rows = letting_div.find_next("tbody").find_all_next("tr")
 
-            letting_info = {get_html_value(row, 0): get_html_value(row, 1) for row in letting_table_rows}
+            letting_info = {utils.get_html_value(row, 0): utils.get_html_value(row, 1) for row in letting_table_rows}
 
             # Agent content attributes
             agent_content_div = soup.find("div", {"class": "agent-content"})
@@ -118,7 +170,7 @@ class Requests():
                 stations_li = stations_li.findChildren("li")
                 stations = [
                     {
-                        'name': clean_string(station_li.findChildren("span")[0].text),
+                        'name': utils.clean_string(station_li.findChildren("span")[0].text),
                         'distance': convert_station_distance(station_li.findChildren("small")[0].text)
                     }
                     for station_li in stations_li
@@ -136,7 +188,7 @@ class Requests():
                 'longitude': longitude,
                 'stations': stations,
                 "amt_stations": len(stations),
-                'district': district
+                'district': district_name
             }
 
             database.insert_property(document)
@@ -146,7 +198,15 @@ class Requests():
             raise e
 
     @sleep
-    def get_properties(self, district_nb, index):
+    def get_properties(self, district_nb: int, index: int) -> BeautifulSoup:
+        """
+        It gets the listing page of a specific district number and index
+        :param district_nb: An integer with the district number to
+        list the properties from. It varies from 0-2926.
+        :param index: An integer with the page index
+        :return: It returns a BeautifulSoup object with the HTML of
+        the listing page
+        """
         url = "https://www.rightmove.co.uk/property-to-rent/find.html?" \
               f"locationIdentifier=OUTCODE%5E{district_nb}&" \
               f"index={index}&" \
