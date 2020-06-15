@@ -1,9 +1,17 @@
 from property_anomaly_detector.database.configs import database_host, database_name, database_port
 
-from pymongo import MongoClient, DESCENDING
+from pymongo import MongoClient
 
 
-class Database():
+class Database:
+    DEFAULT_PROPS_PROJ = {
+        'title': 1,
+        'price': 1,
+        'stations': 1,
+        'district': 1,
+        'latitude': 1,
+        'longitude': 1
+    }
 
     def __init__(self) -> None:
         self.client = MongoClient(database_host, database_port)
@@ -28,3 +36,6 @@ class Database():
 
     def remove_districts(self):
         self.districts.remove({})
+
+    def get_properties(self, default_projection=DEFAULT_PROPS_PROJ):
+        return list(self.properties.find({}, default_projection))
