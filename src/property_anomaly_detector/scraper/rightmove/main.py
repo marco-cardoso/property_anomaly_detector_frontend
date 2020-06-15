@@ -4,7 +4,7 @@ from functools import partial
 from property_anomaly_detector.database import Database
 from property_anomaly_detector.scraper.rightmove.rightmove_requests import Requests
 
-database = Database()
+database = Database("rightmove")
 requests = Requests()
 
 

@@ -1,4 +1,4 @@
-from property_anomaly_detector.database.configs import database_host, database_name, database_port
+from property_anomaly_detector.database.configs import database_host, database_port
 
 from pymongo import MongoClient
 
@@ -13,7 +13,11 @@ class Database:
         'longitude': 1
     }
 
-    def __init__(self) -> None:
+    def __init__(self, database_name: str) -> None:
+        """
+        Database constructor
+        :param database_name: A string with the database_name
+        """
         self.client = MongoClient(database_host, database_port)
 
         database = self.client[database_name]

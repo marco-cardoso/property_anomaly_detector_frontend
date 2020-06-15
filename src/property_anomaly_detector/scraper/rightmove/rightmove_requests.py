@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from property_anomaly_detector import utils
 from property_anomaly_detector.database import Database
 
-database = Database()
+database = Database("rightmove")
 
 
 def get_html_value(element, index) -> str:
