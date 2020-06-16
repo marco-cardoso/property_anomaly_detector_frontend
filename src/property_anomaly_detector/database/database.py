@@ -2,9 +2,6 @@ import os
 
 from pymongo import MongoClient
 
-database_host = os.environ['MONGO_HOST']
-database_port = os.environ['MONGO_PORT']
-
 
 class Database:
     DEFAULT_PROPS_PROJ = {
@@ -21,7 +18,7 @@ class Database:
         Database constructor
         :param database_name: A string with the database_name
         """
-        self.client = MongoClient(database_host, int(database_port))
+        self.client = MongoClient(os.environ.get('MONGO_HOST'), int( os.environ.get('MONGO_PORT')))
 
         database = self.client[database_name]
 
