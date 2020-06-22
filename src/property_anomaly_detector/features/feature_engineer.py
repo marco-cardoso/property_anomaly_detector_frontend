@@ -5,6 +5,7 @@ from geopy.distance import great_circle
 import pandas as pd
 import numpy as np
 
+
 import property_anomaly_detector
 
 
@@ -86,7 +87,7 @@ def convert_df(df: pd.DataFrame):
 
         london = (51.564383, -0.124205)
         manchester = (53.474934, -2.383681)
-        
+
         df['london_distance'] = df[['latitude', 'longitude']].apply(
             lambda x: great_circle(london, (x.latitude, x.longitude)).kilometers, axis=1)
 

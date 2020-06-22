@@ -20,7 +20,8 @@ def read_df():
             'latitude': 1,
             'longitude': 1,
             'rental_prices.per_month': 1,
-            'outcode': 1
+            'outcode': 1,
+            'details_url' : 1
 
         }
     )
