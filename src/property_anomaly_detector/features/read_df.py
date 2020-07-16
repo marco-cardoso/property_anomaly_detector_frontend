@@ -8,7 +8,7 @@ database = Database("zoopla")
 def read_df():
     properties = database.get_properties(
         default_projection={
-            '_id': -1,
+            '_id': False,
             'rental_prices.shared_occupancy' : 1,
             'num_floors' : 1,
             'num_bedrooms' : 1,
@@ -27,8 +27,10 @@ def read_df():
     )
 
     df = pd.DataFrame(properties)
-    del df['_id']
 
+    # rental_prices is an attribute storing a dict
+    # the below instructions are taking specific nested
+    # attributes
     df['monthly_rental_price'] = df['rental_prices'].apply(lambda x: x['per_month'])
     df['shared_occupancy'] = df['rental_prices'].apply(lambda x: x['shared_occupancy'])
 
