@@ -1,24 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React from 'react';
 import Grid from "@material-ui/core/Grid";
-import {useStyles} from './style'
-import TitleBar from '../../components/parts/TitleBar'
 
-export const Dashboard = () => {
+export default function OverviewPanel(){
+    return(
+        <React.Fragment>
 
-
-    const classes = useStyles();
-
-    useEffect(() => {
-    }, []);
-
-
-    return (
-    <Grid container   className={classes.root}>
-            <Grid item xs={12} style={{height : '10%'}}>
-                <TitleBar/>
-            </Grid>
-
-            <Grid style={{height : '80%'}} container xs={12} >
 
                 <Grid container xs={6}>
                     <Grid item xs={12} style={{height : '20%'}}>
@@ -38,13 +24,6 @@ export const Dashboard = () => {
                     </Grid>
                 </Grid>
 
-            </Grid>
-
-            <Grid item xs={12} style={{height : '10%'}}>
-                <h2> Footer</h2>
-            </Grid>
-
-            
-    </Grid>
+        </React.Fragment>
     )
-};
+}
