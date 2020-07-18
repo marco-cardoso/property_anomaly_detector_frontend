@@ -1,5 +1,11 @@
-import React, {useState} from 'react';
-import Grid from "@material-ui/core/Grid";
+import React, {useState} from 'react'
+import Grid from "@material-ui/core/Grid"
+
+import BarPlot from '../plots/anomalies/BarPlot.js'
+import AnomaliesMap from '../plots/anomalies/AnomaliesMap.js'
+import AnomaliesTable from '../tables/AnomaliesTable.js'
+
+import AnomaliesForm from '../forms/AnomaliesForm.js'
 
 export default function AnomaliesPanel(){
 
@@ -10,21 +16,20 @@ export default function AnomaliesPanel(){
 
 
                 <Grid container xs={6}>
-                    <Grid item xs={12} style={{height : '20%'}}>
-                       {/* TODO implement the filters  */}
-                        <h2>Filters</h2>
-                    </Grid>
-                    <Grid item xs={12} style={{height : '80%'}}>
-                        <h2>Table</h2>
+                    {/* <Grid item xs={12} style={{height : '20%'}}>
+                       <AnomaliesForm filters={filters} setFilters={setFilters}/>
+                    </Grid> */}
+                    <Grid item xs={12}>
+                        <AnomaliesTable/>
                     </Grid>
                 </Grid>
 
                 <Grid container xs={6}>
-                    <Grid item xs={12}>
-                        <h2>Map</h2>
+                    <Grid item xs={12} style={{height : '50%' }}>
+                      <AnomaliesMap/>
                     </Grid>
-                    <Grid item xs={12}>
-                        <h2>Bar plot</h2>
+                    <Grid item xs={12} style={{height : '50%'}}>
+                       <BarPlot/>
                     </Grid>
                 </Grid>
 
