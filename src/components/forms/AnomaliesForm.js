@@ -18,7 +18,7 @@ export default function AnomaliesForm({filters, setFilters}){
         <>
             <h3>Filters</h3>
             <Grid container xs={12}>
-                <Slider
+                {/* <Slider
                     value={value}
                     onChange={handleChange}
                     valueLabelDisplay="on"
@@ -26,7 +26,7 @@ export default function AnomaliesForm({filters, setFilters}){
                     getAriaValueText={valuetext}
                     min={0}
                     max={20}
-                />
+                /> */}
                 
             </Grid>
 

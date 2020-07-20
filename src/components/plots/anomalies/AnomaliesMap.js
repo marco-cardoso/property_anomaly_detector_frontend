@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Plot from 'react-plotly.js';
 import { Map, Marker, Popup, TileLayer, Circle } from 'react-leaflet'
 
@@ -7,7 +7,51 @@ import {AnomalyContext} from '../../../contexts/anomalies';
 
 export default function AnomaliesMap() {
 
-    const { anomalies, position, zoom } = useContext(AnomalyContext);
+    const { anomalies, position,currentMarker, zoom, changeTableProps, changeBarValues } = useContext(AnomalyContext);
+
+    const [colors, setColors] = useState([]);
+    const [radius, setRadius] = useState([]);
+
+
+    function handleMarkerClick(index){
+        changeTableProps(index);
+        changeBarValues(index);
+        changeMarkerColors(index);
+    }
+
+    function changeMarkerColors(index){
+        var c = [];
+        var r = [];
+
+        anomalies.map(() => {
+            c.push("red");
+            r.push(100);
+        })
+
+        if(index != null){
+            c[index] = "yellow";
+            r[index] = 200;
+        }
+
+        setColors(c);
+        setRadius(r);
+    }
+
+    useEffect(() => {
+        
+        changeMarkerColors(null);
+
+    }, [anomalies]);
+
+
+    useEffect(() => {
+        
+        if(currentMarker != null){
+            changeMarkerColors(currentMarker);
+        }
+
+    }, [currentMarker]);
+
 
     return (
         <>
@@ -17,8 +61,8 @@ export default function AnomaliesMap() {
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                 />
 
-                {anomalies.map(anomaly => (
-                     <Circle color="red" radius={100} center={[anomaly['latitude'], anomaly['longitude']]}/>
+                {anomalies.map((anomaly, i) => (
+                     <Circle key={i} onClick={() => handleMarkerClick(i) } color={colors[i]} radius={radius[i]} center={[anomaly['latitude'], anomaly['longitude']]}/>
                 ))}
 
             </Map>

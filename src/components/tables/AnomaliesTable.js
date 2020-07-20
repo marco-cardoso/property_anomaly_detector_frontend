@@ -45,6 +45,7 @@ class MuiVirtualizedTable extends React.PureComponent {
     rowHeight: 48,
   };
 
+
   getRowClassName = ({ index }) => {
     const { classes, onRowClick } = this.props;
 
@@ -108,6 +109,8 @@ class MuiVirtualizedTable extends React.PureComponent {
     );
   };
 
+
+
   render() {
     const { classes, columns, rowHeight, headerHeight, ...tableProps } = this.props;
     return (
@@ -116,6 +119,7 @@ class MuiVirtualizedTable extends React.PureComponent {
           <Table
             height={height}
             width={width}
+            // rowStyle={this.a}
             rowHeight={rowHeight}
             gridStyle={{
               direction: 'inherit',
@@ -178,20 +182,12 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
 export default function AnomaliesTable() {
 
-  const { anomalies, setPosition, setZoom, setBarValues, barValues, districtPrices } = useContext(AnomalyContext);
+  const { anomalies, changeMap, changeBarValues, tableIndex } = useContext(AnomalyContext);
 
 
   function handleRowClick(event){
-    const anomaly = anomalies[event.index];
-
-    const bValues = barValues;
-    bValues['anomaly'] = anomaly['monthly_rental_price'];
-    bValues['district_median'] = anomaly['neighbors_median'];
-
-    setBarValues(bValues);
-
-    setZoom(12);
-    setPosition([anomaly.latitude, anomaly.longitude]);
+    changeBarValues(event.index);
+    changeMap(event.index);
   }
 
 
@@ -201,7 +197,7 @@ export default function AnomaliesTable() {
         rowCount={anomalies.length}
         rowGetter={({ index }) => anomalies[index]}
         onRowClick={(index) =>  handleRowClick(index)}
-        scrollToIndex={45}
+        scrollToIndex={tableIndex}
         columns={[
           {
 
