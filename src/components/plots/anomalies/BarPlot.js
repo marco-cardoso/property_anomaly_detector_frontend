@@ -1,8 +1,26 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Plot from 'react-plotly.js';
+
+import {AnomalyContext} from '../../../contexts/anomalies';
+
 
 export default function BarPlot() {
 
+    const { barValues } = useContext(AnomalyContext);
+
+
+    const layout = {
+        autosize: true,
+        transition: {
+          duration: 500,
+          easing: "cubic-in-out"
+        },
+        title: {
+          font: {
+            family: "Lato, sans-serif"
+          }
+        }
+      };
 
     return (
         <>
@@ -10,20 +28,21 @@ export default function BarPlot() {
                 config = {{responsive: true}}
 
                 data={[
-                {
-                    x: [1, 2, 3],
-                    y: [2, 6, 3],
-                    type: 'scatter',
-                    mode: 'lines+markers',
-                    marker: {color: 'red'},
-                },
-                {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
+                    {
+                        type: 'bar', 
+                        x: ['Anomaly', 'District', 'London'], 
+                        y: [
+                          barValues['anomaly'], 
+                          barValues['district_median'], 
+                          barValues['data_median']
+                        ]
+                    },
                 ]}
 
                 useResizeHandler={true}
                 style = {{width: "95%", height: "100%"}}
 
-                layout={ {autosize: true, title: 'A Fancy Plot'} }/>
+                layout={ layout }/>
 
                 
                

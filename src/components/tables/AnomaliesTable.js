@@ -149,11 +149,17 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
 export default function AnomaliesTable() {
 
-  const { anomalies, setPosition, setZoom } = useContext(AnomalyContext);
+  const { anomalies, setPosition, setZoom, setBarValues, barValues } = useContext(AnomalyContext);
 
 
   function handleRowClick(event){
     const anomaly = anomalies[event.index];
+
+    const bValues = barValues;
+    bValues['anomaly'] = anomaly['monthly_rental_price']
+
+    setBarValues(bValues)
+
     setZoom(12);
     setPosition([anomaly.latitude, anomaly.longitude]);
   }

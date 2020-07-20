@@ -18,6 +18,11 @@ export default function AnomaliesPanel(){
 
     const [position, setPosition] = useState([51.505, -0.09]);
     const [zoom, setZoom] = useState(6);
+    const [barValues, setBarValues] = useState({
+        'data_median' : 0,
+        'anomaly' : 0,
+        'district_median' : 0
+    });
     const [anomalies, setAnomalies] = useState([])
 
     useEffect(() => {
@@ -25,7 +30,14 @@ export default function AnomaliesPanel(){
           let response = await fetch("http://0.0.0.0:5000/anomalies?shared_occupancy=['Y']")
           response = await response.json()
           console.log(response)
-          setAnomalies(response)
+
+          setBarValues({
+              'data_median' : 700,
+              'anomaly' : 0,
+              'district_median' : 0
+          })
+
+          setAnomalies(response['anomalies'])
         }
     
         fetchMyAPI()
@@ -35,7 +47,7 @@ export default function AnomaliesPanel(){
     return(
         <React.Fragment>
                 
-                <AnomalyContext.Provider value={{anomalies, setAnomalies, position, setPosition, zoom, setZoom}}>
+                <AnomalyContext.Provider value={{anomalies, setAnomalies, position, setPosition, zoom, setZoom, barValues, setBarValues}}>
                     <Grid container xs={6}>
                         {/* <Grid item xs={12} style={{height : '20%'}}>
                         <AnomaliesForm filters={filters} setFilters={setFilters}/>
