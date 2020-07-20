@@ -149,13 +149,21 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
 export default function AnomaliesTable() {
 
-  const { anomalies } = useContext(AnomalyContext);
+  const { anomalies, setPosition, setZoom } = useContext(AnomalyContext);
+
+
+  function handleRowClick(event){
+    const anomaly = anomalies[event.index];
+    setZoom(12);
+    setPosition([anomaly.latitude, anomaly.longitude]);
+  }
 
   return (
     <Paper style={{ height: '100%', width: '95%', marginLeft : 20 }}>
       <VirtualizedTable
         rowCount={anomalies.length}
         rowGetter={({ index }) => anomalies[index]}
+        onRowClick={(index) =>  handleRowClick(index)}
         columns={[
           {
 

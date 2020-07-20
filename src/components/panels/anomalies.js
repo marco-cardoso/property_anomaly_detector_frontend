@@ -16,6 +16,8 @@ export default function AnomaliesPanel(){
     });
     const [loading, setLoading] = useState(false);
 
+    const [position, setPosition] = useState([51.505, -0.09]);
+    const [zoom, setZoom] = useState(6);
     const [anomalies, setAnomalies] = useState([])
 
     useEffect(() => {
@@ -33,7 +35,7 @@ export default function AnomaliesPanel(){
     return(
         <React.Fragment>
                 
-                <AnomalyContext.Provider value={{anomalies, setAnomalies}}>
+                <AnomalyContext.Provider value={{anomalies, setAnomalies, position, setPosition, zoom, setZoom}}>
                     <Grid container xs={6}>
                         {/* <Grid item xs={12} style={{height : '20%'}}>
                         <AnomaliesForm filters={filters} setFilters={setFilters}/>
