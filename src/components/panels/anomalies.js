@@ -24,6 +24,7 @@ export default function AnomaliesPanel(){
         'district_median' : 0
     });
     const [anomalies, setAnomalies] = useState([])
+    const [districtPrices, setDistrictPrices] = useState({})
 
     useEffect(() => {
         async function fetchMyAPI() {
@@ -38,6 +39,8 @@ export default function AnomaliesPanel(){
           })
 
           setAnomalies(response['anomalies'])
+          setDistrictPrices(response['district_medians'])
+          
         }
     
         fetchMyAPI()
@@ -47,7 +50,7 @@ export default function AnomaliesPanel(){
     return(
         <React.Fragment>
                 
-                <AnomalyContext.Provider value={{anomalies, setAnomalies, position, setPosition, zoom, setZoom, barValues, setBarValues}}>
+                <AnomalyContext.Provider value={{anomalies, setAnomalies, districtPrices, position, setPosition, zoom, setZoom, barValues, setBarValues}}>
                     <Grid container xs={6}>
                         {/* <Grid item xs={12} style={{height : '20%'}}>
                         <AnomaliesForm filters={filters} setFilters={setFilters}/>

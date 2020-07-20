@@ -30,7 +30,7 @@ export default function BarPlot() {
                 data={[
                     {
                         type: 'bar', 
-                        x: ['Anomaly', 'District', 'London'], 
+                        x: ['Anomaly', 'Neighbors', 'London'], 
                         y: [
                           barValues['anomaly'], 
                           barValues['district_median'], 

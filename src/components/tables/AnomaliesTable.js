@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import Paper from '@material-ui/core/Paper';
 import { AutoSizer, Column, Table } from 'react-virtualized';
+import LanguageIcon from '@material-ui/icons/Language';
 
 import {AnomalyContext} from '../../contexts/anomalies';
 
@@ -69,6 +70,28 @@ class MuiVirtualizedTable extends React.PureComponent {
     );
   };
 
+
+  iconRenderer = ({ cellData, columnIndex }) => {
+    const { columns, classes, rowHeight, onRowClick } = this.props;
+    return (
+      <TableCell
+        component="div"
+        className={clsx(classes.tableCell, classes.flexContainer, {
+          [classes.noClick]: onRowClick == null,
+        })}
+        variant="body"
+        style={{ height: rowHeight }}
+        align={(columnIndex != null && columns[columnIndex].numeric) || false ? 'right' : 'left'}
+      >
+        <LanguageIcon onClick={event =>  {window.open(cellData,'_blank' );
+        }}/>
+        
+      </TableCell>
+    );
+  };
+
+
+
   headerRenderer = ({ label, columnIndex }) => {
     const { headerHeight, columns, classes } = this.props;
 
@@ -103,6 +126,12 @@ class MuiVirtualizedTable extends React.PureComponent {
             rowClassName={this.getRowClassName}
           >
             {columns.map(({ dataKey, ...other }, index) => {
+
+              var renderer = this.cellRenderer;
+              if(dataKey === 'details_url'){
+                renderer = this.iconRenderer;
+              }
+
               return (
                 <Column
                   key={dataKey}
@@ -113,7 +142,7 @@ class MuiVirtualizedTable extends React.PureComponent {
                     })
                   }
                   className={classes.flexContainer}
-                  cellRenderer={this.cellRenderer}
+                  cellRenderer={renderer}
                   dataKey={dataKey}
                   {...other}
 
@@ -149,20 +178,22 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
 export default function AnomaliesTable() {
 
-  const { anomalies, setPosition, setZoom, setBarValues, barValues } = useContext(AnomalyContext);
+  const { anomalies, setPosition, setZoom, setBarValues, barValues, districtPrices } = useContext(AnomalyContext);
 
 
   function handleRowClick(event){
     const anomaly = anomalies[event.index];
 
     const bValues = barValues;
-    bValues['anomaly'] = anomaly['monthly_rental_price']
+    bValues['anomaly'] = anomaly['monthly_rental_price'];
+    bValues['district_median'] = anomaly['neighbors_median'];
 
-    setBarValues(bValues)
+    setBarValues(bValues);
 
     setZoom(12);
     setPosition([anomaly.latitude, anomaly.longitude]);
   }
+
 
   return (
     <Paper style={{ height: '100%', width: '95%', marginLeft : 20 }}>
@@ -170,6 +201,7 @@ export default function AnomaliesTable() {
         rowCount={anomalies.length}
         rowGetter={({ index }) => anomalies[index]}
         onRowClick={(index) =>  handleRowClick(index)}
+        scrollToIndex={45}
         columns={[
           {
 
@@ -221,7 +253,14 @@ export default function AnomaliesTable() {
             label: 'Bedrooms',
             dataKey: 'num_bedrooms',
             numeric: true,
+          },
+          {
+       
+            label: 'Visit',
+            dataKey: 'details_url',
+            numeric: true
           }
+          
         ]}
       />
     </Paper>
