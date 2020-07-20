@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import Paper from '@material-ui/core/Paper';
 import { AutoSizer, Column, Table } from 'react-virtualized';
+
+import {AnomalyContext} from '../../contexts/anomalies';
 
 const styles = (theme) => ({
   flexContainer: {
@@ -114,6 +116,9 @@ class MuiVirtualizedTable extends React.PureComponent {
                   cellRenderer={this.cellRenderer}
                   dataKey={dataKey}
                   {...other}
+
+                  flexGrow={1}
+                  width={100}
                 />
               );
             })}
@@ -131,7 +136,7 @@ MuiVirtualizedTable.propTypes = {
       dataKey: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       numeric: PropTypes.bool,
-      width: PropTypes.number.isRequired,
+
     }),
   ).isRequired,
   headerHeight: PropTypes.number,
@@ -141,63 +146,68 @@ MuiVirtualizedTable.propTypes = {
 
 const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
-// ---
-
-const sample = [
-  ['Frozen yoghurt', 159, 6.0, 24, 4.0],
-  ['Ice cream sandwich', 237, 9.0, 37, 4.3],
-  ['Eclair', 262, 16.0, 24, 6.0],
-  ['Cupcake', 305, 3.7, 67, 4.3],
-  ['Gingerbread', 356, 16.0, 49, 3.9],
-];
-
-function createData(id, dessert, calories, fat, carbs, protein) {
-  return { id, dessert, calories, fat, carbs, protein };
-}
-
-const rows = [];
-
-for (let i = 0; i < 200; i += 1) {
-  const randomSelection = sample[Math.floor(Math.random() * sample.length)];
-  rows.push(createData(i, ...randomSelection));
-}
 
 export default function AnomaliesTable() {
+
+  const { anomalies } = useContext(AnomalyContext);
+
   return (
     <Paper style={{ height: '100%', width: '95%', marginLeft : 20 }}>
       <VirtualizedTable
-        rowCount={rows.length}
-        rowGetter={({ index }) => rows[index]}
+        rowCount={anomalies.length}
+        rowGetter={({ index }) => anomalies[index]}
         columns={[
           {
-            width: 200,
-            label: 'Dessert',
-            dataKey: 'dessert',
+
+            label: 'Score',
+            dataKey: 'outlier_score',
           },
           {
-            width: 120,
-            label: 'Calories\u00A0(g)',
-            dataKey: 'calories',
+       
+            label: 'District',
+            dataKey: 'outcode',
             numeric: true,
           },
           {
-            width: 120,
-            label: 'Fat\u00A0(g)',
-            dataKey: 'fat',
+           
+            label: 'Price',
+            dataKey: 'monthly_rental_price',
             numeric: true,
           },
           {
-            width: 120,
-            label: 'Carbs\u00A0(g)',
-            dataKey: 'carbs',
+         
+            label: 'Type',
+            dataKey: 'property_type',
+          },
+          {
+      
+            label: 'Furnished',
+            dataKey: 'furnished_state',
+          },
+          {
+          
+            label: 'Bathrooms',
+            dataKey: 'num_bathrooms',
             numeric: true,
           },
           {
-            width: 120,
-            label: 'Protein\u00A0(g)',
-            dataKey: 'protein',
+          
+            label: 'Recepts',
+            dataKey: 'num_recepts',
             numeric: true,
           },
+          {
+          
+            label: 'Floor',
+            dataKey: 'num_floors',
+            numeric: true,
+          },
+          {
+       
+            label: 'Bedrooms',
+            dataKey: 'num_bedrooms',
+            numeric: true,
+          }
         ]}
       />
     </Paper>

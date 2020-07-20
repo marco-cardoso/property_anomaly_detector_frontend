@@ -21,7 +21,7 @@ export default function Dashboard({ title = 'Dashboard', mainPanel}) {
                 <TitleBar title={title}/>
             </Grid>
 
-            <Grid style={{height : '80%'}} container xs={12} >
+            <Grid item style={{height : '80%'}} container xs={12} >
                 {mainPanel()}
             </Grid>
 
