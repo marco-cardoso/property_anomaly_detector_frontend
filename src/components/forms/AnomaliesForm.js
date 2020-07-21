@@ -2,6 +2,11 @@ import React from 'react'
 import Grid from "@material-ui/core/Grid"
 import Slider from '@material-ui/core/Slider';
 
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import FilterListIcon from '@material-ui/icons/FilterList';
+import HelpIcon from '@material-ui/icons/Help';
+
 function valuetext(value) {
     return `${value}°C`;
   }
@@ -16,8 +21,20 @@ export default function AnomaliesForm({filters, setFilters}){
 
     return (
         <>
-            <h3>Filters</h3>
+            
             <Grid container xs={12}>
+                <List style={{
+                     display: 'flex',
+                     flexDirection: 'row',
+                     padding: 0,
+                }}>
+                    <ListItem>
+                        <FilterListIcon/>
+                    </ListItem>
+                    <ListItem>
+                        <HelpIcon/>
+                    </ListItem>
+                </List>
                 {/* <Slider
                     value={value}
                     onChange={handleChange}

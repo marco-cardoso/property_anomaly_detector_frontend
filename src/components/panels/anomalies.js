@@ -83,10 +83,8 @@ export default function AnomaliesPanel(){
                 
                 <AnomalyContext.Provider value={{anomalies, setAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
                     <Grid container xs={6}>
-                        <Grid item xs={12} style={{height : '10%'}}>
+                        <Grid item xs={12} style={{height : '95%'}}>
                             <AnomaliesForm filters={filters} setFilters={setFilters}/>
-                        </Grid>
-                        <Grid item xs={12} style={{height : '90%'}}>
                             <AnomaliesTable/>
                         </Grid>
                     </Grid>
