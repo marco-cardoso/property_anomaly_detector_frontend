@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
 
-export default function BarPlot() {
+export default function AnomalyPlots() {
 
     const { barValues } = useContext(AnomalyContext);
 

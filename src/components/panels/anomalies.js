@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Grid from "@material-ui/core/Grid"
 
-import BarPlot from '../plots/anomalies/BarPlot.js'
+import AnomalyPlots from '../plots/anomalies/AnomalyPlots.js'
 import AnomaliesMap from '../plots/anomalies/AnomaliesMap.js'
 import AnomaliesTable from '../tables/AnomaliesTable.js'
 import AnomaliesForm from '../forms/AnomaliesForm.js'
@@ -91,10 +91,10 @@ export default function AnomaliesPanel(){
 
                     <Grid container xs={6}>
                         <Grid item xs={12} style={{height : '50%' }}>
-                        <AnomaliesMap/>
+                            <AnomaliesMap/>
                         </Grid>
                         <Grid item xs={12} style={{height : '50%'}}>
-                        <BarPlot/>
+                            <AnomalyPlots/>
                         </Grid>
                     </Grid>
                 </AnomalyContext.Provider>
