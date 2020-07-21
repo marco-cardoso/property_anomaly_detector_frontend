@@ -23,6 +23,7 @@ export default function AnomaliesPanel(){
 
     // Bar plot attributes
     const [barValues, setBarValues] = useState({
+        'outlier_score' : 0,
         'data_median' : 0,
         'anomaly' : 0,
         'district_median' : 0
@@ -30,7 +31,7 @@ export default function AnomaliesPanel(){
 
     // Table attributes
     const [anomalies, setAnomalies] = useState([]);
-    const [tableIndex, setTableIndex] = useState(0);
+    const [tableIndex, setTableIndex] = useState(null);
 
     function changeBarValues(index){
         if(index != null){
@@ -38,6 +39,7 @@ export default function AnomaliesPanel(){
             var current_values = barValues;
             current_values['anomaly'] = anomaly['monthly_rental_price'];
             current_values['district_median'] = anomaly['neighbors_median'];
+            current_values['outlier_score'] = anomaly['outlier_score'];
 
             setBarValues(current_values);
         }
@@ -79,12 +81,12 @@ export default function AnomaliesPanel(){
     return(
         <React.Fragment>
                 
-                <AnomalyContext.Provider value={{anomalies, setAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, changeTableProps}}>
+                <AnomalyContext.Provider value={{anomalies, setAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
                     <Grid container xs={6}>
-                        <Grid item xs={12} style={{height : '20%'}}>
+                        <Grid item xs={12} style={{height : '10%'}}>
                             <AnomaliesForm filters={filters} setFilters={setFilters}/>
                         </Grid>
-                        <Grid item xs={12} style={{height : '80%'}}>
+                        <Grid item xs={12} style={{height : '90%'}}>
                             <AnomaliesTable/>
                         </Grid>
                     </Grid>

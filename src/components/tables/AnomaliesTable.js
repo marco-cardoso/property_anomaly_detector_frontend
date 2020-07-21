@@ -1,13 +1,35 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import Paper from '@material-ui/core/Paper';
-import { AutoSizer, Column, Table } from 'react-virtualized';
+import { AutoSizer, Column, Table, RowRendererParams } from 'react-virtualized';
 import LanguageIcon from '@material-ui/icons/Language';
-
+import { createMuiTheme } from '@material-ui/core/styles';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import {AnomalyContext} from '../../contexts/anomalies';
+
+const theme = createMuiTheme({
+  overrides: {
+
+    MuiTableCell: {
+      'root': {
+        "borderBottom" : "1px solid black",
+      },
+      'body': {
+        "color" : "white",
+        'borderColor' : 'black',
+        'scrollBarColor' : '#0d0e0f'
+      },
+      'head' : {
+        'backgroundColor' : '#232629',
+        'color' : '#037bfc'
+      }
+    }
+  }
+});
+
 
 const styles = (theme) => ({
   flexContainer: {
@@ -15,6 +37,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     boxSizing: 'border-box',
   },
+  borderColor : '#0d0e0f',
   table: {
     // temporary right-to-left patch, waiting for
     // https://github.com/bvaughn/react-virtualized/issues/454
@@ -22,6 +45,7 @@ const styles = (theme) => ({
       flip: false,
       paddingRight: theme.direction === 'rtl' ? '0 !important' : undefined,
     },
+    scrollBarColor : '#0d0e0f'
   },
   tableRow: {
     cursor: 'pointer',
@@ -32,6 +56,8 @@ const styles = (theme) => ({
     },
   },
   tableCell: {
+    // color : 'white',
+    // backgroundColor : '#0d0e0f',
     flex: 1,
   },
   noClick: {
@@ -84,7 +110,10 @@ class MuiVirtualizedTable extends React.PureComponent {
         style={{ height: rowHeight }}
         align={(columnIndex != null && columns[columnIndex].numeric) || false ? 'right' : 'left'}
       >
-        <LanguageIcon onClick={event =>  {window.open(cellData,'_blank' );
+        <LanguageIcon   
+           onMouseOut={({target})=>target.style.color='white'}  
+            onMouseOver={({target})=>target.style.color='#037bfc'}  
+            onClick={event =>  {window.open(cellData,'_blank' );
         }}/>
         
       </TableCell>
@@ -112,14 +141,15 @@ class MuiVirtualizedTable extends React.PureComponent {
 
 
   render() {
-    const { classes, columns, rowHeight, headerHeight, ...tableProps } = this.props;
+    const { classes, columns, rowHeight, handleStyle, headerHeight, ...tableProps } = this.props;
     return (
+      <MuiThemeProvider theme={theme}>
+  
       <AutoSizer>
         {({ height, width }) => (
           <Table
             height={height}
             width={width}
-            // rowStyle={this.a}
             rowHeight={rowHeight}
             gridStyle={{
               direction: 'inherit',
@@ -158,6 +188,7 @@ class MuiVirtualizedTable extends React.PureComponent {
           </Table>
         )}
       </AutoSizer>
+      </MuiThemeProvider>
     );
   }
 }
@@ -182,22 +213,39 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
 export default function AnomaliesTable() {
 
-  const { anomalies, changeMap, changeBarValues, tableIndex } = useContext(AnomalyContext);
-
+  const { anomalies, changeMap, changeBarValues, tableIndex, setTableIndex } = useContext(AnomalyContext);
 
   function handleRowClick(event){
     changeBarValues(event.index);
     changeMap(event.index);
+    setTableIndex(event.index);
+  }
+
+
+  function rowStyleFormat(row) {
+    if (row.index < 0) return;
+    if (tableIndex === row.index) {
+      return {
+        backgroundColor: 'gray',
+        borderTop : '1px solid black',
+        color: 'gold !important'
+      };
+    }
+    return {
+      backgroundColor: '#232629',
+      color: 'gold !important'
+    };
   }
 
 
   return (
-    <Paper style={{ height: '100%', width: '95%', marginLeft : 20 }}>
+    <Paper style={{ height: '100%', width: '95%', marginLeft : 20, backgroundColor: '#232629'  }}>
       <VirtualizedTable
         rowCount={anomalies.length}
         rowGetter={({ index }) => anomalies[index]}
         onRowClick={(index) =>  handleRowClick(index)}
         scrollToIndex={tableIndex}
+        rowStyle={rowStyleFormat}
         columns={[
           {
 
@@ -240,7 +288,7 @@ export default function AnomaliesTable() {
           },
           {
           
-            label: 'Floor',
+            label: 'Floors',
             dataKey: 'num_floors',
             numeric: true,
           },

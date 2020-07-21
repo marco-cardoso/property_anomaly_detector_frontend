@@ -55,6 +55,7 @@ export default function AnomaliesMap() {
 
     return (
         <>
+            <p style={{textAlign : 'center'}}>Anomaly properties in London</p>
             <Map center={position} zoom={zoom} style={{ height : '95%', width : '95%'}}>
                 <TileLayer
                 url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
