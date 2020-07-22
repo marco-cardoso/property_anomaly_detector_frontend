@@ -1,15 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Grid from "@material-ui/core/Grid"
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import HelpIcon from '@material-ui/icons/Help';
+import { IconButton } from '@material-ui/core';
 
+import HelpDialog from '../dialogs/HelpDialog'
 
 export default function AnomaliesForm({filters, setFilters}){
 
 
+    const [helpDialog, setHelpDialog] = useState(false);
+
+    const toggleHelpDialog = () => {
+        setHelpDialog(!helpDialog);
+    }
 
     return (
         <>
@@ -23,12 +30,17 @@ export default function AnomaliesForm({filters, setFilters}){
                      marginBottom : '10px'
                 }}>
                     <ListItem>
-                        <FilterListIcon/>
+                        <IconButton style={{color : 'white'}}>
+                            <FilterListIcon/>
+                        </IconButton>
                     </ListItem>
                     <ListItem>
-                        <HelpIcon/>
+                         <IconButton style={{color : 'white'}} onClick={() => toggleHelpDialog()}>
+                            <HelpIcon />
+                        </IconButton>
                     </ListItem>
                 </List>
+                <HelpDialog status={helpDialog} toggle={toggleHelpDialog} />
             </Grid>
 
         </>
