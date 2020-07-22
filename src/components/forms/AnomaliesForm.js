@@ -8,14 +8,20 @@ import HelpIcon from '@material-ui/icons/Help';
 import { IconButton } from '@material-ui/core';
 
 import HelpDialog from '../dialogs/HelpDialog'
+import AnomaliesFilterDialog from '../dialogs/AnomaliesFilterDialog'
 
 export default function AnomaliesForm({filters, setFilters}){
 
 
     const [helpDialog, setHelpDialog] = useState(false);
+    const [filterDialog, setFilterDialog] = useState(false);
 
     const toggleHelpDialog = () => {
         setHelpDialog(!helpDialog);
+    }
+
+    const toggleFilterDialog = () => {
+        setFilterDialog(!filterDialog);
     }
 
     return (
@@ -30,7 +36,7 @@ export default function AnomaliesForm({filters, setFilters}){
                      marginBottom : '10px'
                 }}>
                     <ListItem>
-                        <IconButton style={{color : 'white'}}>
+                        <IconButton style={{color : 'white'}} onClick={() => toggleFilterDialog()}>
                             <FilterListIcon/>
                         </IconButton>
                     </ListItem>
@@ -40,7 +46,10 @@ export default function AnomaliesForm({filters, setFilters}){
                         </IconButton>
                     </ListItem>
                 </List>
+
+                <AnomaliesFilterDialog status={filterDialog} toggle={toggleFilterDialog} />
                 <HelpDialog status={helpDialog} toggle={toggleHelpDialog} />
+                
             </Grid>
 
         </>
