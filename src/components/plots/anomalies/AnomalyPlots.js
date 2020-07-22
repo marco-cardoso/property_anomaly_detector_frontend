@@ -6,6 +6,7 @@ import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ScoreCard from '../../parts/ScoreCard';
+import colors from '../../../colors'
 
 export default function AnomalyPlots() {
 
@@ -25,8 +26,8 @@ export default function AnomalyPlots() {
 
     const layout = {
         autosize: true,
-        plot_bgcolor:"#232629",
-        paper_bgcolor:"#232629",
+        plot_bgcolor: colors['terciary_color'],
+        paper_bgcolor: colors['terciary_color'],
         transition: {
           duration: 500,
           easing: "cubic-in-out"
@@ -35,14 +36,14 @@ export default function AnomalyPlots() {
           nticks: 10,
           range: [0, 1500],
           tickcolor: 'white',
-          gridcolor: '#232629',
+          gridcolor: colors['terciary_color'],
         },
         font : {
-          color : 'white',
+          color : colors['primary_text_color'],
           size : 16
         },
         title: {
-          color : 'white',
+          color : colors['terciary_color'],
           text : "Price comparison",
           font: {
             family: "Lato, sans-serif"

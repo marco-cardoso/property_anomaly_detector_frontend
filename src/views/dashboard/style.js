@@ -1,9 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
+import colors from '../../colors';
 
 
 const useStyles = makeStyles(theme => ({
     root  : {
-        backgroundColor : '#0d0e0f',
+        backgroundColor : colors['primary_color'],
         color: 'white',
         height : "100%",
         width : '100%',

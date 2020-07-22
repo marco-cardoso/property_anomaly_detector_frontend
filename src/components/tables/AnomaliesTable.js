@@ -9,6 +9,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import { createMuiTheme } from '@material-ui/core/styles';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import {AnomalyContext} from '../../contexts/anomalies';
+import colors from '../../colors'
 
 const theme = createMuiTheme({
   overrides: {
@@ -20,11 +21,11 @@ const theme = createMuiTheme({
       'body': {
         "color" : "white",
         'borderColor' : 'black',
-        'scrollBarColor' : '#0d0e0f'
+        'scrollBarColor' : colors['primary_color']
       },
       'head' : {
-        'backgroundColor' : '#232629',
-        'color' : '#037bfc'
+        'backgroundColor' : colors['terciary_color'],
+        'color' : colors['secondary_text_color']
       }
     }
   }
@@ -37,7 +38,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     boxSizing: 'border-box',
   },
-  borderColor : '#0d0e0f',
+  borderColor : colors['primary_color'],
   table: {
     // temporary right-to-left patch, waiting for
     // https://github.com/bvaughn/react-virtualized/issues/454
@@ -45,7 +46,7 @@ const styles = (theme) => ({
       flip: false,
       paddingRight: theme.direction === 'rtl' ? '0 !important' : undefined,
     },
-    scrollBarColor : '#0d0e0f'
+    scrollBarColor : colors['primary_color']
   },
   tableRow: {
     cursor: 'pointer',
@@ -56,8 +57,8 @@ const styles = (theme) => ({
     },
   },
   tableCell: {
-    // color : 'white',
-    // backgroundColor : '#0d0e0f',
+    // color : colors['text_color'],
+    // backgroundColor : colors['primary_color'],
     flex: 1,
   },
   noClick: {
@@ -111,8 +112,8 @@ class MuiVirtualizedTable extends React.PureComponent {
         align={(columnIndex != null && columns[columnIndex].numeric) || false ? 'right' : 'left'}
       >
         <LanguageIcon   
-           onMouseOut={({target})=>target.style.color='white'}  
-            onMouseOver={({target})=>target.style.color='#037bfc'}  
+           onMouseOut={({target})=>target.style.color=colors['primary_text_color']}  
+            onMouseOver={({target})=>target.style.color=colors['secondary_text_color']}  
             onClick={event =>  {window.open(cellData,'_blank' );
         }}/>
         
@@ -232,7 +233,7 @@ export default function AnomaliesTable() {
       };
     }
     return {
-      backgroundColor: '#232629',
+      backgroundColor: colors['terciary_color'],
       color: 'gold !important'
     };
   }

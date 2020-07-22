@@ -6,6 +6,7 @@ import TitleBar from '../../components/parts/TitleBar'
 import Footer from '../../components/parts/Footer'
 
 import {PageSelectorContext} from '../../contexts/PageSelector'
+import colors from '../../colors'
 
 export default function Dashboard({mainPanel}) {
 
@@ -18,21 +19,21 @@ export default function Dashboard({mainPanel}) {
 
 
     return (
-    <Grid container   className={classes.root}>
-            <Grid item xs={12} style={{height : '7%'}}>
-                <h1>{test}</h1>
-                <TitleBar/>
-            </Grid>
+        <Grid container   className={classes.root}>
+                <Grid item xs={12} style={{height : '7%'}}>
+                    <h1>{test}</h1>
+                    <TitleBar/>
+                </Grid>
 
-            <Grid item style={{height : '82%', backgroundColor : '#16181a' , paddingBottom : '20px'}} container xs={12} >
-                {mainPanel()}
-            </Grid>
-            
-            <Grid item xs={12} style={{height : '10%'}}>
-                <Footer/>
-            </Grid>
+                <Grid item style={{height : '82%', backgroundColor : colors['secondary_color'] , paddingBottom : '20px'}} container xs={12} >
+                    {mainPanel()}
+                </Grid>
+                
+                <Grid item xs={12} style={{height : '10%'}}>
+                    <Footer/>
+                </Grid>
 
-            
-    </Grid>
+                
+        </Grid>
     )
 };

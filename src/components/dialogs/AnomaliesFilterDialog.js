@@ -9,6 +9,8 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import Slider from '@material-ui/core/Slider';
+
 
 const styles = (theme) => ({
   root: {
@@ -72,6 +74,14 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             Anomalies Filter
         </DialogTitle>
         <DialogContent dividers>
+
+            <Slider
+                value={[0, 20]}
+                valueLabelDisplay="auto"
+                aria-labelledby="range-slider"
+                aria-labelledby="discrete-slider-always"
+                valueLabelDisplay="on"
+        />
 
         </DialogContent>
         <DialogActions>

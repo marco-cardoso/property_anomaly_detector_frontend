@@ -23,13 +23,17 @@ export default function Routes() {
     }
   ]
 
+  
+
   return (
     <PageSelectorContext.Provider value={{pages}}>
-     <BrowserRouter>
-        {pages.map((page) => (
-          <Route path={page.path} exact component={page.component}/>
-        ))}
-      </BrowserRouter>
+        
+            <BrowserRouter>
+                {pages.map((page) => (
+                  <Route path={page.path} exact component={page.component}/>
+                ))}
+              </BrowserRouter>
+
     </PageSelectorContext.Provider>
 
   );
