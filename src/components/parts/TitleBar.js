@@ -48,8 +48,8 @@ export default function TitleBar({}) {
        <div onClick={handleClickListItem}  style={{
           display : 'inline-flex'
         }} > 
-              <AppsIcon  style={{paddingTop : '2px'}} />
-               <Typography variant="h5" style={{paddingBottom : '2px'}}>
+              <AppsIcon  style={{paddingTop : '4px'}} />
+               <Typography variant="h5" style={{paddingBottom : '2px', marginLeft : '3px'}}>
                     {currentPageName}
                    
               </Typography>
