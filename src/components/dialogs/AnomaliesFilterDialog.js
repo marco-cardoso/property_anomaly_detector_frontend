@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -10,7 +10,13 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Slider from '@material-ui/core/Slider';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
+import colors from '../../colors';
 
 const styles = (theme) => ({
   root: {
@@ -67,6 +73,22 @@ export default function AnomaliesFilterDialog({status, toggle}) {
 
   const classes = useStyles();
 
+  const [flat, setFlat] = useState(true);
+  const [studio, setStudio] = useState(true);
+  const [otherPropTypes, setOtherPropTypes] = useState(true);
+
+  const [furnished, setFurnished] = useState(true);
+  const [unfurnished, setUnfurnished] = useState(true);
+  const [otherFurnished, setOtherFurnished] = useState(true);
+
+  const [shared, setShared] = useState(true);
+  const [notShared, setNotShared] = useState(false);
+
+  const [amtBedrooms, setAmtBedrooms] = useState([0, 5]);
+  const [amtBathrooms, setAmtBathrooms] = useState([0, 5]);
+  const [amtRecepts, setAmtRecepts] = useState([0, 5]);
+  
+
   return (
     <div>
       <Dialog onClose={toggle} aria-labelledby="customized-dialog-title" open={status}>
@@ -75,13 +97,158 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         </DialogTitle>
         <DialogContent dividers>
 
-            <Slider
-                value={[0, 20]}
-                valueLabelDisplay="auto"
-                aria-labelledby="range-slider"
-                aria-labelledby="discrete-slider-always"
+        <span>Shared occupancy</span>
+
+        <FormGroup row>
+           
+            <FormControlLabel
+              control={
+              <Checkbox 
+              onClick={() => setShared(!shared)}
+              checked={shared}  
+              color="primary"
+              />
+            }
+              label="Y"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onClick={() => setNotShared(!notShared)}
+                  checked={notShared}
+                  color="primary"
+                />
+              }
+              label="N"
+            />
+        </FormGroup>
+
+        <span>Furnished state</span>
+
+        <FormGroup row>
+           
+            <FormControlLabel
+              control={
+              <Checkbox 
+              onClick={() => setFurnished(!furnished)}
+              checked={furnished}  
+              color="primary"
+              />
+            }
+              label="Furnished"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onClick={() => setUnfurnished(!unfurnished)}
+                  checked={unfurnished}
+                  color="primary"
+                />
+              }
+              label="Unfurnished"
+            />
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onClick={() => setOtherFurnished(!otherFurnished)}
+                  checked={otherFurnished}
+                  color="primary"
+                />
+              }
+              label="Other furnished states"
+            />
+        </FormGroup>
+
+
+
+        <span>Property types</span>
+
+        <FormGroup row>
+           
+            <FormControlLabel
+              control={
+              <Checkbox 
+              onClick={() => setFlat(!flat)}
+              checked={flat}  
+              color="primary"
+              />
+            }
+              label="Flat"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onClick={() => setStudio(!studio)}
+                  checked={studio}
+                  color="primary"
+                />
+              }
+              label="Studio"
+            />
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onClick={() => setOtherFurnished(!otherFurnished)}
+                  checked={otherFurnished}
+                  color="primary"
+                />
+              }
+              label="Other property types"
+            />
+        </FormGroup>
+
+        <span>Amount of bedrooms</span>
+
+        <FormGroup row>
+
+              <Slider
+                value={amtBedrooms}
+                style={{marginTop : '40px', color : 'red', marginRight : '55px', marginLeft : '10px'}}
+                onChange={(event, newValue) => setAmtBedrooms(newValue)}
                 valueLabelDisplay="on"
-        />
+                aria-labelledby="range-slider"
+                min={0}
+                max={20}
+              />
+           
+            
+        </FormGroup>
+
+        <span>Amount of bathrooms</span>
+
+        <FormGroup row>
+
+              <Slider
+                value={amtBathrooms}
+                style={{marginTop : '40px', color : 'red', marginRight : '55px', marginLeft : '10px'}}
+                onChange={(event, newValue) => setAmtBathrooms(newValue)}
+                valueLabelDisplay="on"
+                aria-labelledby="range-slider"
+                min={0}
+                max={20}
+              />
+           
+            
+        </FormGroup>
+
+        <span>Amount of recepts</span>
+
+        <FormGroup row>
+           
+              <Slider
+                value={amtRecepts}
+                style={{marginTop : '40px',color : 'red', marginRight : '55px', marginLeft : '10px'}}
+                onChange={(event, newValue) => setAmtRecepts(newValue)}
+                valueLabelDisplay="on"
+                aria-labelledby="range-slider"
+                min={0}
+                max={20}
+              />
+            
+        </FormGroup>
+
 
         </DialogContent>
         <DialogActions>
