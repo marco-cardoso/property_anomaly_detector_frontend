@@ -13,8 +13,8 @@ export default function AnomaliesMap() {
 
 
     function handleMarkerClick(index){
-        changeTableProps(index);
         changeBarValues(index);
+        changeTableProps(index);
         changeMarkerColors(index);
     }
 
