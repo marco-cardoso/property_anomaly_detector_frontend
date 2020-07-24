@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
@@ -13,11 +12,7 @@ import Slider from '@material-ui/core/Slider';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import {AnomalyContext} from '../../contexts/anomalies';
-import colors from '../../colors';
-import {getAnomalies} from '../../services/requests';
 
 const styles = (theme) => ({
   root: {
@@ -32,15 +27,6 @@ const styles = (theme) => ({
   },
 });
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-    },
-    heading: {
-      fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular,
-    },
-  }));
 
 
 const DialogTitle = withStyles(styles)((props) => {
@@ -72,7 +58,6 @@ const DialogActions = withStyles((theme) => ({
 
 export default function AnomaliesFilterDialog({status, toggle}) {
 
-  const classes = useStyles();
 
   const [flat, setFlat] = useState(true);
   const [studio, setStudio] = useState(true);

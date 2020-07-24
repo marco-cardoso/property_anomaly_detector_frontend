@@ -8,7 +8,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 
 import {PageSelectorContext} from '../../contexts/PageSelector'
 
-export default function TitleBar({}) {
+export default function TitleBar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   

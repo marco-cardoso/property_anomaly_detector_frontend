@@ -3,7 +3,6 @@ import Plot from 'react-plotly.js';
 
 import {AnomalyContext} from '../../../contexts/anomalies';
 import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 
 import ScoreCard from '../../parts/ScoreCard';
 import colors from '../../../colors'
@@ -11,18 +10,6 @@ import colors from '../../../colors'
 export default function AnomalyPlots() {
 
     const { barValues } = useContext(AnomalyContext);
-
-    const useStyles = makeStyles((theme) => ({
-      root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        '& > *': {
-          margin: theme.spacing(1),
-          width: theme.spacing(16),
-          height: theme.spacing(16),
-        },
-      },
-    }));
 
     const layout = {
         autosize: true,

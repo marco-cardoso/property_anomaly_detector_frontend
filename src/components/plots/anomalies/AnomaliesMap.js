@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import Plot from 'react-plotly.js';
-import { Map, Marker, Popup, TileLayer, Circle } from 'react-leaflet'
+import { Map, TileLayer, Circle } from 'react-leaflet'
 
 import {AnomalyContext} from '../../../contexts/anomalies';
 

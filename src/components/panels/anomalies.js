@@ -15,7 +15,6 @@ export default function AnomaliesPanel(){
     const [filters, setFilters] = useState({
         'test' : 'hello'
     });
-    const [loading, setLoading] = useState(false);
 
     // Map attributes
     const [position, setPosition] = useState([51.505, -0.09]);
