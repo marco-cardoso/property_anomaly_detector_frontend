@@ -56,7 +56,7 @@ export default function AnomaliesMap() {
     return (
         <>
             <p style={{textAlign : 'center'}}>Anomaly properties in London</p>
-            <Map center={position} zoom={zoom} style={{ height : '95%', width : '95%'}}>
+            <Map center={position} zoom={zoom} style={{ height : '95%', zIndex: 3, width : '95%'}}>
                 <TileLayer
                 url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"

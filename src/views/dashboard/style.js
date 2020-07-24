@@ -12,6 +12,10 @@ const useStyles = makeStyles(theme => ({
         paddingRight: 5,
         paddingLeft: 5
     },
+    backdrop: {
+        zIndex: theme.zIndex.drawer + 10,
+        color: '#fff',
+      },
 }));
 
 export {useStyles};

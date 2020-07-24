@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import Grid from "@material-ui/core/Grid"
 
 import AnomalyPlots from '../plots/anomalies/AnomalyPlots.js'
@@ -6,7 +6,8 @@ import AnomaliesMap from '../plots/anomalies/AnomaliesMap.js'
 import AnomaliesTable from '../tables/AnomaliesTable.js'
 import AnomaliesForm from '../forms/AnomaliesForm.js'
 import {AnomalyContext} from '../../contexts/anomalies'
-import {getAmomalies} from '../../services/requests';
+import {SnackbarContext} from '../../contexts/SnackbarContext'
+import {getAnomalies} from '../../services/requests';
 
 
 export default function AnomaliesPanel(){
@@ -32,6 +33,9 @@ export default function AnomaliesPanel(){
     // Table attributes
     const [anomalies, setAnomalies] = useState([]);
     const [tableIndex, setTableIndex] = useState(null);
+
+
+    const {setSnackbarType, setSnackbarMessage, setSnackbarStatus, setBackdropStatus} = useContext(SnackbarContext);
 
     function changeBarValues(index){
         if(index != null){
@@ -61,27 +65,60 @@ export default function AnomaliesPanel(){
         setTableIndex(index)
     }
 
-    useEffect(() => {
-        async function fetchMyAPI() {
-          let response = await fetch("http://0.0.0.0:5000/anomalies?shared_occupancy=['Y']")
-          response = await response.json()
-          console.log(response)
+    function displaySnackbarError(){
+        setSnackbarType("error")
+        setSnackbarMessage("Invalid data parameters !") 
+        setSnackbarStatus(true)   
+    }
 
-          var bv = barValues;
-          bv['data_median'] = response['data_median'];
+    function displaySnackbarSuccess(){
+        setSnackbarType("success")
+        setSnackbarMessage("Anomalies successfully updated !") 
+        setSnackbarStatus(true)   
+    }
 
-          setBarValues(bv);
-          setAnomalies(response['anomalies'])          
-        }
+     async function updateAnomalies(params){
+        setBackdropStatus(true);
+        try {
+            var response =  await getAnomalies(params)
+            if(response.status === 200){
+
+                response = await response.json()
     
-        fetchMyAPI()
+                var bv = barValues;
+                bv['data_median'] = response['data_median'];
+    
+                setBarValues(bv);
+                setAnomalies(response['anomalies'])  
+                
+                displaySnackbarSuccess()
+                setBackdropStatus(false);
+                return true;
+                
+            }
+            else 
+            {
+                displaySnackbarError()
+            }
+        }
+        catch (TypeError){
+            displaySnackbarError()
+        }  
+        setBackdropStatus(false);
+        return false;
+    }
+
+    useEffect(() => {
+        updateAnomalies({});
+        
       }, [])
+
 
  
     return(
         <React.Fragment>
                 
-                <AnomalyContext.Provider value={{anomalies, setAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
+                <AnomalyContext.Provider value={{anomalies, setAnomalies, updateAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
                     <Grid container xs={6}>
                         <Grid item xs={12} style={{height : '95%'}}>
                             <AnomaliesForm filters={filters} setFilters={setFilters}/>
