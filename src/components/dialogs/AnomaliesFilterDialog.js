@@ -122,38 +122,11 @@ export default function AnomaliesFilterDialog({status, toggle}) {
 
   async function filter(){
 
-        var params = {}
+      var params = {}
 
-      //   const furnishedStates = [[furnished, 'furnished'], [unfurnished, 'unfurnished', [otherFurnished, 'others']]]
-      //   const pptStates = [[flat, "Flat"], [studio, "Studio"], [otherPropTypes, "others"]]
-      //   const sharedState = [[shared, "Y"], [notShared, "N"]]
-
-      //   params['furnished_state'] = furnishedStates.map((state) => {
-      //     if((state[0] != null)  && (state[0] === true)){
-      //       return state[1]
-      //     }
-      //     else {
-      //       return -1
-      //     }
-      // })
-
-      // params['property_type'] = pptStates.map((state) => {
-      //   if((state[0] != null)  && (state[0] === true)){
-      //     return state[1]
-      //   }
-      //   else {
-      //     return -1
-      //   }
-      // })
-
-      // params['shared_occupancy'] = sharedState.map((state) => {
-      //   if((state[0] != null)  && (state[0] === true)){
-      //     return state[1]
-      //   }
-      //   else {
-      //     return -1
-      //   }
-      // })
+      params['furnished_state'] = furnishedCategories.filter((furnished, idx) => furnishedStates[idx]);
+      params['property_type'] = propertyTypeCategories.filter((propertyType, idx) => propertyTypeStates[idx]);
+      params['shared_occupancy'] = sharedOccupancyCategories.filter((shared, idx) => sharedOccupancyStates[idx]);
 
       params['num_bedrooms_min'] = amtBedrooms[0]
       params['num_bedrooms_max'] = amtBedrooms[1]
@@ -163,6 +136,8 @@ export default function AnomaliesFilterDialog({status, toggle}) {
 
       params['num_recepts_min'] = amtRecepts[0]
       params['num_recepts_max'] = amtRecepts[1]
+
+      console.log(params);
 
       const responseSuccess = await updateAnomalies(params)   
       if(responseSuccess)
