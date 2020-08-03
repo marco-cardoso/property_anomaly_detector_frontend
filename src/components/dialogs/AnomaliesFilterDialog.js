@@ -180,7 +180,9 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         </DialogTitle>
         <DialogContent dividers>
 
-        <span>Shared occupancy</span>
+        <Typography variant="h6" component="h3">
+          Shared occupancy
+        </Typography>
 
         <FormGroup row>
             {sharedOccupancyStates.map((state, idx) => {
@@ -198,7 +200,9 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             }            
         </FormGroup>
 
-        <span>Furnished state</span>
+        <Typography variant="h6" component="h3">
+          Furnished state
+        </Typography>
 
         <FormGroup row>
             {furnishedStates.map((state, idx) => {
@@ -217,8 +221,9 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         </FormGroup>
 
 
-
-        <span>Property types</span>
+        <Typography variant="h6" component="h3">
+          Property types
+        </Typography>
 
         <FormGroup row>
             {propertyTypeStates.map((state, idx) => {
@@ -236,7 +241,9 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             }            
         </FormGroup>
 
-        <span>Amount of bedrooms</span>
+        <Typography variant="h6" component="h3">
+          Amount of bedrooms
+        </Typography>
 
         <FormGroup row>
 
@@ -253,7 +260,9 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             
         </FormGroup>
 
-        <span>Amount of bathrooms</span>
+        <Typography variant="h6" component="h3">
+          Amount of bathrooms
+        </Typography>
 
         <FormGroup row>
 
@@ -270,7 +279,9 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             
         </FormGroup>
 
-        <span>Amount of recepts</span>
+        <Typography variant="h6" component="h3">
+          Amount of recepts
+        </Typography>
 
         <FormGroup row>
            
