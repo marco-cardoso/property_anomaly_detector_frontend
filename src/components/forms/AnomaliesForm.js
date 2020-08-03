@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import HelpIcon from '@material-ui/icons/Help';
 import { IconButton } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
 import HelpDialog from '../dialogs/HelpDialog'
 import AnomaliesFilterDialog from '../dialogs/AnomaliesFilterDialog'
@@ -44,6 +45,9 @@ export default function AnomaliesForm({filters, setFilters}){
                          <IconButton style={{color : 'white'}} onClick={() => toggleHelpDialog()}>
                             <HelpIcon />
                         </IconButton>
+                    </ListItem>
+                    <ListItem>
+                        <Button variant="outlined"  color="secondary">Classify</Button>
                     </ListItem>
                 </List>
 
