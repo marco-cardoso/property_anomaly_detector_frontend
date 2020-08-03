@@ -4,6 +4,7 @@ async function getAnomalies(params) {
   
     var url = "http://0.0.0.0:5000/anomalies?"
 
+    /* Convert dictionary to string URL format */
     Object.keys(params).forEach(function(key) {
         url += key + "="
 
@@ -23,4 +24,11 @@ async function getAnomalies(params) {
     return response  
   }
 
-export {getAnomalies}
+async function getCategoricalFilters() {
+    var url = "http://0.0.0.0:5000/get-categorical-filters"
+    let response = await fetch(url)
+    return response  
+}
+
+export {getAnomalies, getCategoricalFilters}
+
