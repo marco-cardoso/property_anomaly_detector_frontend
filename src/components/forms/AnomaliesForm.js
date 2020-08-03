@@ -10,12 +10,14 @@ import Button from '@material-ui/core/Button';
 
 import HelpDialog from '../dialogs/HelpDialog'
 import AnomaliesFilterDialog from '../dialogs/AnomaliesFilterDialog'
+import AnomalyTestDialog from '../dialogs/AnomalyTestDialog'
 
 export default function AnomaliesForm({filters, setFilters}){
 
 
     const [helpDialog, setHelpDialog] = useState(false);
     const [filterDialog, setFilterDialog] = useState(false);
+    const [anomalyTestDialog, setAnomalyTestDialog] = useState(false);
 
     const toggleHelpDialog = () => {
         setHelpDialog(!helpDialog);
@@ -23,6 +25,10 @@ export default function AnomaliesForm({filters, setFilters}){
 
     const toggleFilterDialog = () => {
         setFilterDialog(!filterDialog);
+    }
+
+    const toggleAnomalyTestDialog = () => {
+        setAnomalyTestDialog(!anomalyTestDialog);
     }
 
     return (
@@ -47,13 +53,15 @@ export default function AnomaliesForm({filters, setFilters}){
                         </IconButton>
                     </ListItem>
                     <ListItem>
-                        <Button variant="outlined"  color="secondary">Classify</Button>
+                        <Button variant="outlined"  color="secondary"  onClick={() => toggleAnomalyTestDialog()}>
+                            Classify
+                        </Button>
                     </ListItem>
                 </List>
 
                 <AnomaliesFilterDialog status={filterDialog} toggle={toggleFilterDialog} />
                 <HelpDialog status={helpDialog} toggle={toggleHelpDialog} />
-                
+                <AnomalyTestDialog status={anomalyTestDialog} toggle={toggleAnomalyTestDialog}/>
             </Grid>
 
         </>
