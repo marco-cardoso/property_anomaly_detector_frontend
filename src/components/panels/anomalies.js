@@ -108,7 +108,23 @@ export default function AnomaliesPanel(){
     }
 
     useEffect(() => {
-        updateAnomalies({});
+        const anomalyParams = {};
+
+        anomalyParams['furnished_state'] = ['furnished', 'unfurnished'];
+        anomalyParams['shared_occupancy'] = ['Y'];
+        anomalyParams['property_type'] = ['Flat', 'Studio'];
+
+        anomalyParams['num_bedrooms_min'] = 0
+        anomalyParams['num_bedrooms_max'] = 3
+  
+        anomalyParams['num_bathrooms_min'] = 0
+        anomalyParams['num_bathrooms_max'] = 3
+  
+        anomalyParams['num_recepts_min'] = 0
+        anomalyParams['num_recepts_max'] = 5
+
+
+        updateAnomalies(anomalyParams);
         
       }, [])
 

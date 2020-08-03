@@ -60,8 +60,8 @@ const DialogActions = withStyles((theme) => ({
 export default function AnomaliesFilterDialog({status, toggle}) {
 
 
-  const [amtBedrooms, setAmtBedrooms] = useState([0, 5]);
-  const [amtBathrooms, setAmtBathrooms] = useState([0, 5]);
+  const [amtBedrooms, setAmtBedrooms] = useState([0, 3]);
+  const [amtBathrooms, setAmtBathrooms] = useState([0, 3]);
   const [amtRecepts, setAmtRecepts] = useState([0, 5]);
 
   const [furnishedStates, setFurnishedStates] = useState([]);
@@ -79,18 +79,32 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         const response = await getCategoricalFilters();
         const categoricalFilters = await response.json();
 
+        const defaultFurnished = ['furnished', 'unfurnished'];
+        const defaultShared = ['Y'];
+        const defaultProperties = ['Flat', 'Studio'];
+         
+
         setFurnishedCategories(categoricalFilters['furnished_state']);
-        setFurnishedStates(categoricalFilters['furnished_state'].map(() => {
+        setFurnishedStates(categoricalFilters['furnished_state'].map((furnished) => {
+          if(defaultFurnished.includes(furnished)){
+            return true;
+          }
           return false;
         }))
 
         setSharedOccupancyCategories(categoricalFilters['shared_occupancy']);
-        setSharedOccupancyStates(categoricalFilters['shared_occupancy'].map(() => {
+        setSharedOccupancyStates(categoricalFilters['shared_occupancy'].map((shared) => {
+          if(defaultShared.includes(shared)){
+            return true;
+          }
           return false;
         }))
 
         setPropertyTypeCategories(categoricalFilters['property_type']);
-        setPropertyTypeStates(categoricalFilters['property_type'].map(() => {
+        setPropertyTypeStates(categoricalFilters['property_type'].map((propertyType) => {
+          if(defaultProperties.includes(propertyType)){
+            return true;
+          }
           return false;
         }))
   }
@@ -136,8 +150,6 @@ export default function AnomaliesFilterDialog({status, toggle}) {
 
       params['num_recepts_min'] = amtRecepts[0]
       params['num_recepts_max'] = amtRecepts[1]
-
-      console.log(params);
 
       const responseSuccess = await updateAnomalies(params)   
       if(responseSuccess)
