@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -13,6 +13,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import {AnomalyContext} from '../../contexts/anomalies';
+import {getCategoricalFilters} from '../../services/requests'
 
 const styles = (theme) => ({
   root: {
@@ -59,58 +60,100 @@ const DialogActions = withStyles((theme) => ({
 export default function AnomaliesFilterDialog({status, toggle}) {
 
 
-  const [flat, setFlat] = useState(true);
-  const [studio, setStudio] = useState(true);
-  const [otherPropTypes, setOtherPropTypes] = useState(false);
-
-  const [furnished, setFurnished] = useState(true);
-  const [unfurnished, setUnfurnished] = useState(true);
-  const [otherFurnished, setOtherFurnished] = useState(false);
-
-  const [shared, setShared] = useState(true);
-  const [notShared, setNotShared] = useState(false);
-
   const [amtBedrooms, setAmtBedrooms] = useState([0, 5]);
   const [amtBathrooms, setAmtBathrooms] = useState([0, 5]);
   const [amtRecepts, setAmtRecepts] = useState([0, 5]);
 
+  const [furnishedStates, setFurnishedStates] = useState([]);
+  const [furnishedCategories, setFurnishedCategories] = useState([]);
+
+  const [sharedOccupancyStates, setSharedOccupancyStates] = useState([]);
+  const [sharedOccupancyCategories, setSharedOccupancyCategories] = useState([]);
+
+  const [propertyTypeStates, setPropertyTypeStates] = useState([]);
+  const [propertyTypeCategories, setPropertyTypeCategories] = useState([]);
+
   const {updateAnomalies} = useContext(AnomalyContext);
 
+  async function setCategoricalFilters(){
+        const response = await getCategoricalFilters();
+        const categoricalFilters = await response.json();
+
+        setFurnishedCategories(categoricalFilters['furnished_state']);
+        setFurnishedStates(categoricalFilters['furnished_state'].map(() => {
+          return false;
+        }))
+
+        setSharedOccupancyCategories(categoricalFilters['shared_occupancy']);
+        setSharedOccupancyStates(categoricalFilters['shared_occupancy'].map(() => {
+          return false;
+        }))
+
+        setPropertyTypeCategories(categoricalFilters['property_type']);
+        setPropertyTypeStates(categoricalFilters['property_type'].map(() => {
+          return false;
+        }))
+  }
+
+  useEffect(() => {
+
+      setCategoricalFilters();
+
+  }, [])
+
+
+  function changeSharedOccupancy(idx){
+    const so = [...sharedOccupancyStates];
+    so[idx] = !so[idx]
+    setSharedOccupancyStates(so);
+  }
+
+  function changeFurnished(idx){
+    const so = [...furnishedStates];
+    so[idx] = !so[idx]
+    setFurnishedStates(so);
+  }
+
+  function changePropertyType(idx){
+    const so = [...propertyTypeStates];
+    so[idx] = !so[idx]
+    setPropertyTypeStates(so);
+  }
 
   async function filter(){
 
         var params = {}
 
-        const furnishedStates = [[furnished, 'furnished'], [unfurnished, 'unfurnished', [otherFurnished, 'others']]]
-        const pptStates = [[flat, "Flat"], [studio, "Studio"], [otherPropTypes, "others"]]
-        const sharedState = [[shared, "Y"], [notShared, "N"]]
+      //   const furnishedStates = [[furnished, 'furnished'], [unfurnished, 'unfurnished', [otherFurnished, 'others']]]
+      //   const pptStates = [[flat, "Flat"], [studio, "Studio"], [otherPropTypes, "others"]]
+      //   const sharedState = [[shared, "Y"], [notShared, "N"]]
 
-        params['furnished_state'] = furnishedStates.map((state) => {
-          if((state[0] != null)  && (state[0] === true)){
-            return state[1]
-          }
-          else {
-            return -1
-          }
-      })
+      //   params['furnished_state'] = furnishedStates.map((state) => {
+      //     if((state[0] != null)  && (state[0] === true)){
+      //       return state[1]
+      //     }
+      //     else {
+      //       return -1
+      //     }
+      // })
 
-      params['property_type'] = pptStates.map((state) => {
-        if((state[0] != null)  && (state[0] === true)){
-          return state[1]
-        }
-        else {
-          return -1
-        }
-      })
+      // params['property_type'] = pptStates.map((state) => {
+      //   if((state[0] != null)  && (state[0] === true)){
+      //     return state[1]
+      //   }
+      //   else {
+      //     return -1
+      //   }
+      // })
 
-      params['shared_occupancy'] = sharedState.map((state) => {
-        if((state[0] != null)  && (state[0] === true)){
-          return state[1]
-        }
-        else {
-          return -1
-        }
-      })
+      // params['shared_occupancy'] = sharedState.map((state) => {
+      //   if((state[0] != null)  && (state[0] === true)){
+      //     return state[1]
+      //   }
+      //   else {
+      //     return -1
+      //   }
+      // })
 
       params['num_bedrooms_min'] = amtBedrooms[0]
       params['num_bedrooms_max'] = amtBedrooms[1]
@@ -140,54 +183,37 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         <span>Shared occupancy</span>
 
         <FormGroup row>
-           
-            <FormControlLabel
-              control={
-              <Checkbox 
-              onClick={() => setShared(!shared)}
-              checked={shared}  
-              color="primary"
-              />
-            }
-              label="Y"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  onClick={() => setNotShared(!notShared)}
-                  checked={notShared}
-                  color="primary"
-                />
-              }
-              label="N"
-            />
+            {sharedOccupancyStates.map((state, idx) => {
+                 return <FormControlLabel
+                    control={
+                        <Checkbox 
+                        onChange={() =>  changeSharedOccupancy(idx)}
+                        checked={sharedOccupancyStates[idx]}  
+                        color="primary"
+                        />
+                  }
+                    label={sharedOccupancyCategories[idx]}
+               />
+                })
+            }            
         </FormGroup>
 
         <span>Furnished state</span>
 
         <FormGroup row>
-           
-            <FormControlLabel
-              control={
-              <Checkbox 
-              onClick={() => setFurnished(!furnished)}
-              checked={furnished}  
-              color="primary"
-              />
-            }
-              label="Furnished"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  onClick={() => setUnfurnished(!unfurnished)}
-                  checked={unfurnished}
-                  color="primary"
-                />
-              }
-              label="Unfurnished"
-            />
-
+            {furnishedStates.map((state, idx) => {
+                 return <FormControlLabel
+                    control={
+                        <Checkbox 
+                        onChange={() =>  changeFurnished(idx)}
+                        checked={furnishedStates[idx]}  
+                        color="primary"
+                        />
+                  }
+                    label={furnishedCategories[idx]}
+               />
+                })
+            }            
         </FormGroup>
 
 
@@ -195,27 +221,19 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         <span>Property types</span>
 
         <FormGroup row>
-           
-            <FormControlLabel
-              control={
-              <Checkbox 
-              onClick={() => setFlat(!flat)}
-              checked={flat}  
-              color="primary"
-              />
-            }
-              label="Flat"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  onClick={() => setStudio(!studio)}
-                  checked={studio}
-                  color="primary"
-                />
-              }
-              label="Studio"
-            />
+            {propertyTypeStates.map((state, idx) => {
+                 return <FormControlLabel
+                    control={
+                        <Checkbox 
+                        onChange={() =>  changePropertyType(idx)}
+                        checked={propertyTypeStates[idx]}  
+                        color="primary"
+                        />
+                  }
+                    label={propertyTypeCategories[idx]}
+               />
+                })
+            }            
         </FormGroup>
 
         <span>Amount of bedrooms</span>
