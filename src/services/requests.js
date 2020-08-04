@@ -30,5 +30,29 @@ async function getCategoricalFilters() {
     return response  
 }
 
-export {getAnomalies, getCategoricalFilters}
+async function classifyProperty(property) {
+    var url = "http://0.0.0.0:5000/classify-property?"
+    
+    /* Convert dictionary to string URL format */
+    Object.keys(property).forEach(function(key) {
+        url += key + "="
+
+        if( Object.prototype.toString.call( property[key] ) === '[object Array]' )
+        {
+            url += JSON.stringify(property[key]) 
+        }
+        else
+        {
+            url += property[key]
+        }
+        
+        url += "&"
+    });
+
+    let response = await fetch(url)
+    return response  
+}
+
+
+export {getAnomalies, getCategoricalFilters, classifyProperty}
 

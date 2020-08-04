@@ -79,7 +79,7 @@ export default function AnomaliesFilterDialog({status, toggle}) {
         const response = await getCategoricalFilters();
         const categoricalFilters = await response.json();
 
-        const defaultFurnished = ['furnished', 'unfurnished'];
+        const defaultFurnished = ['furnished', 'unfurnished', 'furnished_or_unfurnished'];
         const defaultShared = ['Y'];
         const defaultProperties = ['Flat', 'Studio'];
          

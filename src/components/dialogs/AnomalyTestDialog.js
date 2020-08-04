@@ -14,7 +14,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
 import CoordinatesPickerMap from '../plots/CoordinatePickerMap'
-import {getCategoricalFilters} from '../../services/requests'
+import {getCategoricalFilters, classifyProperty} from '../../services/requests'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -78,7 +78,11 @@ export default function AnomaliesFilterDialog({status, toggle}) {
   const [amtBedrooms, setAmtBedrooms] = useState(1);
   const [amtBathrooms, setAmtBathrooms] = useState(1);
   const [amtRecepts, setAmtRecepts] = useState(1);
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(1);
+
+  
+  const [propertyAnomalyScore, setPropertyAnomalyScore] = useState(0);
+  const [highestNeighborAnomalyScore, setHighestNeighborAnomalyScore] = useState(0);
   
   async function setCategoricalFilters(){
     const response = await getCategoricalFilters();
@@ -87,7 +91,29 @@ export default function AnomaliesFilterDialog({status, toggle}) {
     setFurnishedCategories(categoricalFilters['furnished_state']);
     setSharedOccupancyCategories(categoricalFilters['shared_occupancy']);
     setPropertyTypeCategories(categoricalFilters['property_type']);
-}
+  }
+
+  async function getPropertyAnomalyScore(){
+    const property = {
+      'latitude' : pickerPosition[0].toFixed(6),
+      'longitude' : pickerPosition[1].toFixed(6),
+      'furnished_state' : furnishedCategories[furnished],
+      'shared_occupancy' : sharedOccupancyCategories[shared],
+      'property_type' : propertyTypeCategories[propertyType],
+      'num_bedrooms' : amtBedrooms,
+      'num_bathrooms' : amtBathrooms,
+      'num_recepts' : amtRecepts,
+      'monthly_rental_price' : price
+    }
+
+    const response = await classifyProperty(property);
+    const {property_anomaly_score, highest_neighbor_score} = await response.json();
+
+    setPropertyAnomalyScore(property_anomaly_score);
+    setHighestNeighborAnomalyScore(highest_neighbor_score);
+  }
+
+
 
 
   useEffect(() => {
@@ -109,7 +135,7 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             zoom={13}
           />
 
-          <p>Latitude : {pickerPosition[0].toFixed(3)} Longitude : {pickerPosition[1].toFixed(3)} </p>
+          <p>Latitude : {pickerPosition[0].toFixed(6)} Longitude : {pickerPosition[1].toFixed(6)} </p>
 
           <FormGroup>
           <FormControl style={{ minWidth: 200, marginTop : 20}}>
@@ -164,7 +190,7 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             type="number"
             value={amtBedrooms}
             style={{marginTop : 20}}
-            onChange={(event) => setAmtBedrooms(event.value)}
+            onChange={(event) => setAmtBedrooms(event.target.value)}
             InputLabelProps={{
               shrink: true,
             }}
@@ -176,7 +202,7 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             type="number"
             value={amtBathrooms}
             style={{marginTop : 20}}
-            onChange={(event) => setAmtBathrooms(event.value)}
+            onChange={(event) => setAmtBathrooms(event.target.value)}
             InputLabelProps={{
               shrink: true,
             }}
@@ -188,29 +214,34 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             type="number"
             value={amtRecepts}
             style={{marginTop : 20}}
-            onChange={(event) => setAmtRecepts(event.value)}    
+            onChange={(event) => setAmtRecepts(event.target.value)}    
             InputLabelProps={{
               shrink: true,
             }}        
           />
 
+         
           <TextField
             label="Property price"
             id="ppt-price"
             type="number"
             value={price}
             style={{marginTop : 20}}
-            onChange={(event) => setPrice(event.value)} 
+            onChange={(event) => setPrice(event.target.value)}    
             InputLabelProps={{
               shrink: true,
-            }}           
+            }}        
           />
 
           </FormGroup>
-        
+
+          <p>Property anomaly score : {propertyAnomalyScore}</p> 
+          <p>Highest neighbor anomaly score : {highestNeighborAnomalyScore}</p> 
+          
+
         </DialogContent>
         <DialogActions>
-          <Button autoFocus  color="primary">
+          <Button autoFocus  color="primary" onClick={getPropertyAnomalyScore}>
             Get the anomaly score
           </Button>
         </DialogActions>

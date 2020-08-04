@@ -12,9 +12,7 @@ import {getAnomalies} from '../../services/requests';
 
 export default function AnomaliesPanel(){
 
-    const [filters, setFilters] = useState({
-        'test' : 'hello'
-    });
+    const [filters, setFilters] = useState({});
 
     // Map attributes
     const [position, setPosition] = useState([51.505, -0.09]);
@@ -110,7 +108,7 @@ export default function AnomaliesPanel(){
     useEffect(() => {
         const anomalyParams = {};
 
-        anomalyParams['furnished_state'] = ['furnished', 'unfurnished'];
+        anomalyParams['furnished_state'] = ['furnished', 'unfurnished', 'furnished_or_unfurnished'];
         anomalyParams['shared_occupancy'] = ['Y'];
         anomalyParams['property_type'] = ['Flat', 'Studio'];
 
