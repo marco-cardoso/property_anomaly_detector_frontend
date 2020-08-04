@@ -12,7 +12,7 @@ import Slider from '@material-ui/core/Slider';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
+import CoordinatesPickerMap from '../plots/CoordinatePickerMap'
 
 const styles = (theme) => ({
   root: {
@@ -58,7 +58,9 @@ const DialogActions = withStyles((theme) => ({
 
 export default function AnomaliesFilterDialog({status, toggle}) {
 
+  const londonCoordinates = [51.505, -0.09];
 
+  const [pickerPosition, setPickerPosition] = useState(londonCoordinates);
   async function setCategoricalFilters(){
        
   }
@@ -77,7 +79,13 @@ export default function AnomaliesFilterDialog({status, toggle}) {
             Insert the property data below
         </DialogTitle>
         <DialogContent dividers>
-
+          <CoordinatesPickerMap 
+            center={londonCoordinates} 
+            pickerPos={pickerPosition} 
+            setPickerPos={setPickerPosition}
+            zoom={13}
+          />
+          <p>Latitude : {pickerPosition[0].toFixed(3)} Longitude : {pickerPosition[1].toFixed(3)} </p>
         </DialogContent>
         <DialogActions>
           <Button autoFocus  color="primary">
