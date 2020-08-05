@@ -6,21 +6,29 @@ export default function OverviewPanel(){
         <React.Fragment>
 
 
-                <Grid container xs={6}>
-                    <Grid item xs={12} style={{height : '20%'}}>
-                        <h2>Filters</h2>
+                <Grid container xs={7}>
+                    <Grid style={{height : '10%'}} item xs={12}>
+                        <h2>Filters </h2>
                     </Grid>
-                    <Grid item xs={12} style={{height : '80%'}}>
-                        <h2>Table</h2>
+                    <Grid  style={{height : '40%'}} item xs={12}>
+                        <h2>Heatmap</h2>
+                    </Grid>
+                    <Grid  style={{height : '40%'}} item xs={12}>
+                        <h2>Bar plot</h2>
                     </Grid>
                 </Grid>
 
-                <Grid container xs={6}>
+                <Grid container xs={5}>
                     <Grid item xs={12}>
-                        <h2>Map</h2>
+                        <h2>Price hist</h2>
                     </Grid>
-                    <Grid item xs={12}>
-                        <h2>Bar plot</h2>
+                    <Grid container item xs={12}>
+                        <Grid xs={8}>
+                            <h2>Property type prices</h2>
+                        </Grid>
+                        <Grid xs={4}>
+                            <h2>Price ECDF</h2>
+                        </Grid>
                     </Grid>
                 </Grid>
 
