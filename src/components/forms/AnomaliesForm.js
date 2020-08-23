@@ -42,11 +42,11 @@ export default function AnomaliesForm({filters, setFilters}){
                      marginLeft : '25px',
                      marginBottom : '10px'
                 }}>
-                    <ListItem>
+                    {/* <ListItem>
                         <IconButton style={{color : 'white'}} onClick={() => toggleFilterDialog()}>
                             <FilterListIcon fontSize="small"/>
                         </IconButton>
-                    </ListItem>
+                    </ListItem> */}
                     <ListItem>
                          <IconButton fontSize="small" style={{color : 'white'}} onClick={() => toggleHelpDialog()}>
                             <HelpIcon fontSize="small" />
