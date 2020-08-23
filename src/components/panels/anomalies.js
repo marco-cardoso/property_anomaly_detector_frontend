@@ -128,14 +128,14 @@ export default function AnomaliesPanel(){
         <React.Fragment>
                 
                 <AnomalyContext.Provider value={{anomalies, setAnomalies, updateAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
-                    <Grid container xs={6}>
+                    <Grid container xs={7}>
                         <Grid item xs={12} style={{height : '95%'}}>
                             <AnomaliesForm filters={filters} setFilters={setFilters}/>
                             <AnomaliesTable/>
                         </Grid>
                     </Grid>
 
-                    <Grid container xs={6}>
+                    <Grid container xs={5}>
                         <Grid item xs={12} style={{height : '50%' }}>
                             <AnomaliesMap/>
                         </Grid>
