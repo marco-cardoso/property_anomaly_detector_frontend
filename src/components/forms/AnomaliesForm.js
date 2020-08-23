@@ -44,16 +44,16 @@ export default function AnomaliesForm({filters, setFilters}){
                 }}>
                     <ListItem>
                         <IconButton style={{color : 'white'}} onClick={() => toggleFilterDialog()}>
-                            <FilterListIcon/>
+                            <FilterListIcon fontSize="small"/>
                         </IconButton>
                     </ListItem>
                     <ListItem>
-                         <IconButton style={{color : 'white'}} onClick={() => toggleHelpDialog()}>
-                            <HelpIcon />
+                         <IconButton fontSize="small" style={{color : 'white'}} onClick={() => toggleHelpDialog()}>
+                            <HelpIcon fontSize="small" />
                         </IconButton>
                     </ListItem>
                     <ListItem>
-                        <Button variant="outlined"  color="secondary"  onClick={() => toggleAnomalyTestDialog()}>
+                        <Button fontSize="small" variant="outlined"  color="secondary"  onClick={() => toggleAnomalyTestDialog()}>
                             Classify
                         </Button>
                     </ListItem>

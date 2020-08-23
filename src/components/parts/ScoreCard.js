@@ -19,7 +19,7 @@ export default function ScoreCard({score, title, color, backgroundImage, height,
         <Paper style={paperStyle} elevation={3} >
             <div style={{verticalAlign : 'middle', textAlign : 'center', top : '50%'}}>
                 <h3> {title} </h3>
-                <h1 style={{fontSize : 100}}>{score}</h1>
+                <h1 style={{fontSize : 70}}>{score}</h1>
             </div>
         </Paper>
     )

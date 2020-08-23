@@ -27,7 +27,7 @@ export default function AnomalyPlots() {
         },
         font : {
           color : colors['primary_text_color'],
-          size : 16
+          size : 10
         },
         title: {
           color : colors['terciary_color'],

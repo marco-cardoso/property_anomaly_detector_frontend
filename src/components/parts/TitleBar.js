@@ -48,20 +48,27 @@ export default function TitleBar() {
        <div onClick={handleClickListItem}  style={{
           display : 'inline-flex'
         }} > 
-              <AppsIcon  style={{paddingTop : '4px'}} />
-               <Typography variant="h5" style={{paddingBottom : '2px', marginLeft : '3px'}}>
+              <AppsIcon  style={{paddingTop : '2px'}} fontSize="small" />
+               <Typography variant="h7" style={{paddingBottom : '2px', marginLeft : '3px'}}>
                     {currentPageName}
                    
               </Typography>
-              <ArrowDropDownIcon  style={{paddingTop : '3px'}}/>
+              {/*  <ArrowDropDownIcon  style={{paddingTop : '2px'}}/>  */ }
              
         </div>
 
+      {/* 
+          In order to make the menu work just change
+          the open attribute to :
+
+          open={Boolean(anchorEl)} 
+
+      */ }
       <Menu
         id="lock-menu"
         anchorEl={anchorEl}
         keepMounted
-        open={Boolean(anchorEl)}
+        open={false}
         onClose={handleClose}
       >
         {pages.map((option, index) => {

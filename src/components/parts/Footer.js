@@ -4,8 +4,8 @@ export default function Footer() {
     return (
        <>
         <img src="https://www.zoopla.co.uk/static/images/mashery/powered-by-zoopla-150x73.png" 
-            width="150" 
-            height="73" 
+            width="100" 
+            height="53" 
             title="Property information powered by Zoopla" 
             alt="Property information powered by Zoopla" 
             border="0"
