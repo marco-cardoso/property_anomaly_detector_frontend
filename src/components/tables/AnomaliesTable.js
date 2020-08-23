@@ -276,6 +276,11 @@ export default function AnomaliesTable() {
             dataKey: 'furnished_state',
           },
           {
+      
+            label: 'Shared',
+            dataKey: 'shared_occupancy',
+          },
+          {
           
             label: 'Bathrooms',
             dataKey: 'num_bathrooms',
