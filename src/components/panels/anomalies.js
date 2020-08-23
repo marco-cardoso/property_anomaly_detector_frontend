@@ -82,11 +82,7 @@ export default function AnomaliesPanel(){
 
                 response = await response.json()
     
-                var bv = barValues;
-                bv['data_median'] = response['data_median'];
-    
-                setBarValues(bv);
-                setAnomalies(response['anomalies'])  
+                setAnomalies(response)  
                 
                 displaySnackbarSuccess()
                 setBackdropStatus(false);
