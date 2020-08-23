@@ -282,20 +282,8 @@ export default function AnomaliesTable() {
           },
           {
           
-            label: 'Bathrooms',
-            dataKey: 'num_bathrooms',
-            numeric: true,
-          },
-          {
-          
             label: 'Recepts',
             dataKey: 'num_recepts',
-            numeric: true,
-          },
-          {
-          
-            label: 'Floors',
-            dataKey: 'num_floors',
             numeric: true,
           },
           {
