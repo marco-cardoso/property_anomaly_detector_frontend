@@ -21,7 +21,7 @@ export default function AnomalyPlots() {
         },
         yaxis: {
           nticks: 10,
-          range: [0, 1500],
+          range: [0, 2500],
           tickcolor: 'white',
           gridcolor: colors['terciary_color'],
         },
