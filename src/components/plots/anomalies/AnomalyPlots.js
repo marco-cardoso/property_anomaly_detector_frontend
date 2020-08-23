@@ -51,13 +51,12 @@ export default function AnomalyPlots() {
                                 width : 0.3,
                                 type: 'bar', 
                                 marker : {
-                                  color : ['red', '#037bfc', 'blue']
+                                  color : ['red', '#037bfc']
                                 },
-                                x: ['Anomaly', 'Neighbors', 'London'], 
+                                x: ['Anomaly', 'Neighbors'], 
                                 y: [
                                   barValues['anomaly'], 
-                                  barValues['district_median'], 
-                                  barValues['data_median']
+                                  barValues['district_median']
                                 ]
                             },
                         ]}
