@@ -13,12 +13,7 @@ export default function Routes() {
   const pages = [
     {
       "path" : "/",
-      "title" : "Overview",
-      "component" : OverviewDashboard
-    },
-    {
-      "path" : "/anomalies",
-      "title" : "Anomalies",
+      "title" : " Rental Property Anomaly Detector",
       "component" : AnomaliesDashboard
     }
   ]
