@@ -31,6 +31,9 @@ export default function AnomaliesPanel(){
     const [anomalies, setAnomalies] = useState([]);
     const [tableIndex, setTableIndex] = useState(null);
 
+    // General attributes
+    const [lastUpdateDate, setlastUpdateDate] = useState(null);
+
 
     const {setSnackbarType, setSnackbarMessage, setSnackbarStatus, setBackdropStatus} = useContext(SnackbarContext);
 
@@ -82,7 +85,8 @@ export default function AnomaliesPanel(){
 
                 response = await response.json()
     
-                setAnomalies(response)  
+                setAnomalies(response['anomalies'])  
+                setlastUpdateDate(response['last_update_date'])
                 
                 displaySnackbarSuccess()
                 setBackdropStatus(false);
@@ -127,7 +131,7 @@ export default function AnomaliesPanel(){
     return(
         <React.Fragment>
                 
-                <AnomalyContext.Provider value={{anomalies, setAnomalies, updateAnomalies, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
+                <AnomalyContext.Provider value={{anomalies, setAnomalies, updateAnomalies, lastUpdateDate, currentMarker, changeMap,position, zoom,  barValues, changeBarValues, tableIndex, setTableIndex, changeTableProps}}>
                     <Grid container xs={7}>
                         <Grid item xs={12} style={{height : '95%'}}>
                             <AnomaliesForm filters={filters} setFilters={setFilters}/>
