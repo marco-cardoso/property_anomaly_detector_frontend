@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import Grid from "@material-ui/core/Grid"
 
 import List from '@material-ui/core/List';
@@ -12,12 +12,17 @@ import HelpDialog from '../dialogs/HelpDialog'
 import AnomaliesFilterDialog from '../dialogs/AnomaliesFilterDialog'
 import AnomalyTestDialog from '../dialogs/AnomalyTestDialog'
 
+import {AnomalyContext} from '../../contexts/anomalies'
+
 export default function AnomaliesForm({filters, setFilters}){
 
 
     const [helpDialog, setHelpDialog] = useState(false);
     const [filterDialog, setFilterDialog] = useState(false);
     const [anomalyTestDialog, setAnomalyTestDialog] = useState(false);
+
+    const { lastUpdateDate } = useContext(AnomalyContext);
+
 
     const toggleHelpDialog = () => {
         setHelpDialog(!helpDialog);
@@ -58,6 +63,7 @@ export default function AnomaliesForm({filters, setFilters}){
                         </Button>
                     </ListItem>
                 </List>
+                <h5>Last update date : {lastUpdateDate}</h5>
 
                 <AnomaliesFilterDialog status={filterDialog} toggle={toggleFilterDialog} />
                 <HelpDialog status={helpDialog} toggle={toggleHelpDialog} />
