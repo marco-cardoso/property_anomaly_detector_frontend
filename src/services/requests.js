@@ -1,37 +1,22 @@
-
+// const hostUrl = "http://" + process.env.REACT_APP_BACKEND_HOST + ":" + process.env.REACT_APP_BACKEND_PORT;
+const hostUrl = "http://3.133.34.180:8080"
 
 async function getAnomalies(params) {
   
-    var url = "http://localhost:5000/anomalies?"
+    var url = hostUrl + "/anomalies";
+    let response = await fetch(url);
 
-    /* Convert dictionary to string URL format */
-    Object.keys(params).forEach(function(key) {
-        url += key + "="
-
-        if( Object.prototype.toString.call( params[key] ) === '[object Array]' )
-        {
-            url += JSON.stringify(params[key]) 
-        }
-        else
-        {
-            url += params[key]
-        }
-        
-        url += "&"
-    });
-    console.log(url)
-    let response = await fetch(url)
     return response  
   }
 
 async function getCategoricalFilters() {
-    var url = "http://localhost:5000/get-categorical-filters"
+    var url = hostUrl + "/get-categorical-filters";
     let response = await fetch(url)
     return response  
 }
 
 async function classifyProperty(property) {
-    var url = "http://localhost:5000/classify-property?"
+    var url = hostUrl + "/classify-property?"
     
     /* Convert dictionary to string URL format */
     Object.keys(property).forEach(function(key) {
