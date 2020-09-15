@@ -1,9 +1,9 @@
 version: '3.7'
 services:
-app-prod:
+  frontend:
     container_name: property-anomaly-detector
     build:
       context: .
-      dockerfile: docker/Dockerfile.react
+      dockerfile: ./docker/Dockerfile.react
     ports:
       - '8080:80'
