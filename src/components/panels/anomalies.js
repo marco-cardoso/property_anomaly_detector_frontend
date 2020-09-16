@@ -77,16 +77,16 @@ export default function AnomaliesPanel(){
         setSnackbarStatus(true)   
     }
 
-     async function updateAnomalies(params){
+     async function updateAnomalies(){
         setBackdropStatus(true);
         try {
-            var response =  await getAnomalies(params)
+            const response =  await getAnomalies()
             if(response.status === 200){
 
-                response = await response.json()
+                const responseResult = await response.json()
     
-                setAnomalies(response['anomalies'])  
-                setlastUpdateDate(response['last_update_date'])
+                setAnomalies(responseResult['anomalies'])  
+                setlastUpdateDate(responseResult['last_update_date'])
                 
                 displaySnackbarSuccess()
                 setBackdropStatus(false);
@@ -98,7 +98,8 @@ export default function AnomaliesPanel(){
                 displaySnackbarError()
             }
         }
-        catch (TypeError){
+        catch (e){
+            console.log(e)
             displaySnackbarError()
         }  
         setBackdropStatus(false);
@@ -106,24 +107,7 @@ export default function AnomaliesPanel(){
     }
 
     useEffect(() => {
-        const anomalyParams = {};
-
-        anomalyParams['furnished_state'] = ['furnished', 'unfurnished', 'furnished_or_unfurnished'];
-        anomalyParams['shared_occupancy'] = ['Y'];
-        anomalyParams['property_type'] = ['Flat', 'Studio'];
-
-        anomalyParams['num_bedrooms_min'] = 0
-        anomalyParams['num_bedrooms_max'] = 3
-  
-        anomalyParams['num_bathrooms_min'] = 0
-        anomalyParams['num_bathrooms_max'] = 3
-  
-        anomalyParams['num_recepts_min'] = 0
-        anomalyParams['num_recepts_max'] = 5
-
-
-        updateAnomalies(anomalyParams);
-        
+        updateAnomalies();
       }, [])
 
 
