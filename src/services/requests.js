@@ -1,7 +1,7 @@
 // const hostUrl = "http://" + process.env.REACT_APP_BACKEND_HOST + ":" + process.env.REACT_APP_BACKEND_PORT;
 const hostUrl = "http://3.133.34.180:8080"
 
-async function getAnomalies(params) {
+async function getAnomalies() {
   
     var url = hostUrl + "/anomalies";
     let response = await fetch(url);
