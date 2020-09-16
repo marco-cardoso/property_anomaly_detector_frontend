@@ -1,0 +1,12 @@
+jupyter_notebooks*
+*/env*
+*/venv*
+*.env
+*.log
+.git
+.idea
+.gitignore
+node_modules
+build
+Dockerfile
+Dockerfile.prod
