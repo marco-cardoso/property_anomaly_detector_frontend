@@ -9,7 +9,7 @@ Go to the above link to get more information about the project.
 ## Requirements
 
 <ul>
-  <li>At least dockver v19.03.12</li>
+  <li>At least docker v19.03.12</li>
 </ul>
 
 After the requirements are satisfied type the command :
